@@ -76,8 +76,6 @@ class Daftar_ulang extends CI_Controller
             $this->load->view("admin/daftar_ulang/tambah_daftar_ulang_satu_kelas");
         }
 
-    
-
     public function detail($no)
         {
             $daftar_ulang = $this->daftar_ulang_model;
@@ -123,7 +121,6 @@ class Daftar_ulang extends CI_Controller
             
             $this->viewEditDaftarUlang($no);
         }
-
 
     public function delete($no=null)
         {

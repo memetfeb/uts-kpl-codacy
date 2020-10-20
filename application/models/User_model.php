@@ -17,7 +17,6 @@ class User_model extends CI_Model
         ];
     }
 
-
     public function doLogin(){
         $post = $this->input->post();
 
@@ -58,11 +57,6 @@ class User_model extends CI_Model
 
     public function isNotLogin(){
         return $this->session->userdata('user_logged') === null;
-    }
-
-    private function _updateLastLogin($user_id){
-        $sql = "UPDATE {$this->_table} SET last_login=now() WHERE user_id={$user_id}";
-        $this->db->query($sql);
     }
 
     public function update($no){
