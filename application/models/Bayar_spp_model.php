@@ -155,36 +155,36 @@ class Bayar_spp_model extends CI_Model
         $this->db->select("*");
         $this->db->where("s.NIS", $post["nis"], FALSE);
         $query = $this->db->get("data_siswa as s"); 
-        return $total = $query->num_rows();
+        $total = $query->num_rows();
+        return $total;
     }
 
     public function cekNamaTransaksi()
     {
         $post = $this->input->post();
-
         $this->db->select("*");
         $this->db->where("s.NIS", $post["nis"], FALSE);
         $this->db->where("s.nama_siswa", $post["nama_siswa"]);
         $query = $this->db->get("data_siswa as s"); 
-        return $total = $query->num_rows();
+        $total = $query->num_rows();
+        return $total;
     }
 
     public function cekTransaksi()
     {
         $post = $this->input->post();
-
         $this->db->select("*");
         $this->db->where("b.NIS", $post["nis"], FALSE);
         $this->db->where("b.bulan_spp", $post["bulan_spp"], FALSE);
         $this->db->where("b.tahun_spp", $post["tahun_spp"], FALSE);
         $query = $this->db->get("bayar_spp as b"); 
-        return $total = $query->num_rows();
+        $total = $query->num_rows();
+        return $total;
     }
 
     public function update()
     {
         $post = $this->input->post();
-
         $this->db->set("tanggal_bayar_spp", $post["tanggal_bayar_spp"]);
         $this->db->set("jumlah", $post["biaya_spp"]);
         $this->db->where("no_bayar_spp", $post["no_bayar_spp"]);

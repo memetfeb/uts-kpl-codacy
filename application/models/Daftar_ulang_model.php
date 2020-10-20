@@ -21,7 +21,6 @@ class Daftar_ulang_model extends CI_Model
              ['field' => 'nis',
             'label' => 'NIS',
             'rules' => 'required']
-
         ];
     }
 
@@ -31,7 +30,6 @@ class Daftar_ulang_model extends CI_Model
              ['field' => 'kelas',
             'label' => 'Kelas',
             'rules' => 'required']
-
         ];
     }
 
@@ -39,7 +37,6 @@ class Daftar_ulang_model extends CI_Model
     {
         //return $this->db->get($this->_table)->result();
         $sql = "SELECT s.nama_siswa, CONCAT(s.kelas,s.nama_kelas) as kelas_nama,s.kelas, d.* FROM daftar_ulang as d, data_siswa as s WHERE d.NIS = s.NIS ORDER BY d.tahun_ajaran DESC, s.kelas ASC, d.NIS ASC";
-
         return $this->db->query($sql)->result();
     }
 
@@ -188,7 +185,6 @@ class Daftar_ulang_model extends CI_Model
             $this->db->order_by('b.tahun_ajaran DESC, s.kelas ASC, s.nama_kelas ASC, b.NIS ASC');
             return $this->db->get("daftar_ulang as b, data_siswa as s")->result();
         }
-
     }
 
 
@@ -305,10 +301,6 @@ class Daftar_ulang_model extends CI_Model
             $post = $this->input->post();
             $tahun_ajaran1 = $post["tahun_ajaran1"];
             $tahun_ajaran2 = $post["tahun_ajaran2"];
-
-            // if ($post["naikkelas"] == 1) {
-            //     $this->naikkelas($post["nis"], $post["kelas_daftar_ulang"]);
-            // }
             $this->nis = $post["nis"];
             $this->tahun_ajaran = $tahun_ajaran1.'/'.$tahun_ajaran2;
             $this->spp = $post["spp"];
@@ -324,10 +316,6 @@ class Daftar_ulang_model extends CI_Model
             $post = $this->input->post();
             $tahun_ajaran1 = $post["tahun_ajaran1"];
             $tahun_ajaran2 = $post["tahun_ajaran2"];
-
-            // if ($post["naikkelas"] == 1) {
-            //     $this->naikkelas($post["nis"], $post["kelas_daftar_ulang"]);
-            // }
             $this->no_bayar_daftar_ulang = 1;
             $this->nis = $post["nis"];
             $this->tahun_ajaran = $tahun_ajaran1.'/'.$tahun_ajaran2;
@@ -373,9 +361,7 @@ class Daftar_ulang_model extends CI_Model
             $jumlah = $post["total"];
             $terbayar = 0;
             $status = 0;
-
             $siswa = $this->getSiswaByKelas($kelas);
-
             foreach ($siswa as $siswa) {
                 $NIS = $siswa->NIS;
                 if ($this->cekTransaksi1($NIS,$tahun_ajaran) == 0){
@@ -389,53 +375,48 @@ class Daftar_ulang_model extends CI_Model
                         'pembukaan_rek' => $pembukaan_rek,
                         'jumlah' => $jumlah,
                         'terbayar' => $terbayar,
-                        'status' => $status
-                        
+                        'status' => $status  
                     );
                     $this->db->insert('daftar_ulang', $data);
                 }
-
             }
         }
 
 
     public function saveCicil()
     {
-            $post = $this->input->post();
-            $data = array(
-                    'no_bayar_daftar_ulang' => $post["no_bayar_daftar_ulang"],
-                    'tanggal_bayar_daftarulang' => $post["tanggal_bayar"],
-                    'nominal' => $post["nominal_bayar"]
-            );
-
-            $this->db->insert("cicil_daftar_ulang", $data);
+        $post = $this->input->post();
+        $data = array(
+            'no_bayar_daftar_ulang' => $post["no_bayar_daftar_ulang"],
+            'tanggal_bayar_daftarulang' => $post["tanggal_bayar"],
+            'nominal' => $post["nominal_bayar"]
+        );
+        $this->db->insert("cicil_daftar_ulang", $data);
     }
 
     public function updateTerbayar($no)
     {
-            $this->db->select_sum("nominal");
-            $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
-            $terbayar = $this->db->get("cicil_daftar_ulang")->row();
-            
-            $this->db->set("terbayar", $terbayar->nominal);
+        $this->db->select_sum("nominal");
+        $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
+        $terbayar = $this->db->get("cicil_daftar_ulang")->row();
+        $this->db->set("terbayar", $terbayar->nominal);
+        $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
+        $this->db->update('daftar_ulang');
+        $this->db->select("jumlah");
+        $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
+        $total = $this->db->get("daftar_ulang")->row();
+
+        if($total->jumlah <= $terbayar->nominal){
+            $this->setSPPJuli($no); 
+            $this->db->set("status", 1);
             $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
             $this->db->update('daftar_ulang');
-
-            $this->db->select("jumlah");
+        }else{
+            $this->notSetSPPJuli($no);
+            $this->db->set("status", 0);
             $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
-            $total = $this->db->get("daftar_ulang")->row();
-
-            if($total->jumlah <= $terbayar->nominal){
-                $this->setSPPJuli($no); 
-                $this->db->set("status", 1);
-                $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
-                $this->db->update('daftar_ulang');
-            }else{
-                $this->notSetSPPJuli($no);
-                $this->db->set("status", 0);
-                $this->db->where("no_bayar_daftar_ulang", $no, FALSE);
-                $this->db->update('daftar_ulang');
-            }
+            $this->db->update('daftar_ulang');
+        }
     }
 
     public function setSPPJuli($no){
@@ -444,8 +425,7 @@ class Daftar_ulang_model extends CI_Model
         $tahunSPP = $this->getTahunSPPJuli($no);
         $cekSPPJuli = $this->cekSPPJuli($du->NIS, 7, $tahunSPP->tahun);
 
-        if($cekSPPJuli == 0){
-                      
+        if($cekSPPJuli == 0){      
             $data = array(
                 'NIS' => $du->NIS,
                 'tanggal_bayar_spp' => $tanggal,
@@ -454,7 +434,7 @@ class Daftar_ulang_model extends CI_Model
                 'jumlah' => $du->spp
             );
             $this->db->insert('bayar_spp', $data);
-            }   
+        }   
     }
 
     public function notSetSPPJuli($no){
@@ -476,7 +456,6 @@ class Daftar_ulang_model extends CI_Model
         }else{
             return 1;
         }
-
     }
 
     public function getSPPJuli($nis, $bulan, $tahun){
@@ -488,8 +467,6 @@ class Daftar_ulang_model extends CI_Model
         $sql = "SELECT SUBSTRING(tahun_ajaran, -4) as tahun FROM `daftar_ulang` WHERE no_bayar_daftar_ulang = $no";
         return $this->db->query($sql)->row();
     }
-
-
 
     public function cekNisTransaksi()
         {
@@ -507,8 +484,9 @@ class Daftar_ulang_model extends CI_Model
             $this->db->select("CONCAT(s.kelas,s.nama_kelas) as kelas_nama,*");
             $this->db->where("s.NIS", $post["nis"], FALSE);
             $this->db->where("s.nama_siswa", $post["nama_siswa"]);
-            $query = $this->db->get("data_siswa as s"); 
-            return $total = $query->num_rows();
+            $query = $this->db->get("data_siswa as s");
+            $total = $query->num_rows();
+            return $total;
         }
 
     public function cekTransaksi()
@@ -517,12 +495,12 @@ class Daftar_ulang_model extends CI_Model
             $tahun_ajaran1 = $post["tahun_ajaran1"];
             $tahun_ajaran2 = $post["tahun_ajaran2"];
             $tahun_ajaran = $tahun_ajaran1.'/'.$tahun_ajaran2;
-
             $this->db->select("*");
             $this->db->where("b.NIS", $post["nis"], FALSE);
             $this->db->like("b.tahun_ajaran", $tahun_ajaran, FALSE);
-            $query = $this->db->get("daftar_ulang as b"); 
-            return $total = $query->num_rows();
+            $query = $this->db->get("daftar_ulang as b");
+            $total = $query->num_rows();
+            return $total;
         }
 
     public function cekTransaksi1($NIS,$tahun_ajaran)
@@ -530,15 +508,14 @@ class Daftar_ulang_model extends CI_Model
             $this->db->select("*");
             $this->db->where("b.NIS", $NIS, FALSE);
             $this->db->like("b.tahun_ajaran", $tahun_ajaran, FALSE);
-            $query = $this->db->get("daftar_ulang as b"); 
-            return $total = $query->num_rows();
+            $query = $this->db->get("daftar_ulang as b");
+            $total = $query->num_rows();
+            return $total;
         }
-
 
     public function updateCicil($no)
     {
         $post = $this->input->post();
-
         $this->db->set("nominal", $post["nominal_bayar"]);
         $this->db->set("tanggal_bayar_daftarulang", $post["tanggal_bayar"]);
         $this->db->where("no_cicil_daftar_ulang", $no);
@@ -548,7 +525,6 @@ class Daftar_ulang_model extends CI_Model
     public function updateDaftarUlang($no)
     {
         $post = $this->input->post();
-
         $this->db->set("spp", $post["spp"]);
         $this->db->set("seragam", $post["seragam"]);
         $this->db->set("kegiatan_siswa", $post["kegiatan_siswa"]);
@@ -628,9 +604,7 @@ class Daftar_ulang_model extends CI_Model
         $sql = "(SELECT CONCAT(b.kelas,b.nama_kelas) as nama, SUM(a.jumlah) as target, SUM(a.spp) as spp, SUM(a.seragam) as seragam, SUM(a.kegiatan_siswa) as keg_siswa, SUM(a.spi) as spi, SUM(a.pembukaan_rek) as pembukaan_rek, SUM(a.terbayar) as terbayar, SUM((a.jumlah - a.terbayar)) as hutang FROM daftar_ulang as a, data_siswa as b WHERE a.NIS = b.NIS AND a.tahun_ajaran LIKE '{$tahunAjaran}' GROUP BY b.kelas, b.nama_kelas)
             UNION
             SELECT 'TOTAL' as nama, SUM(a.jumlah) as target, SUM(a.spp) as spp, SUM(a.seragam) as seragam, SUM(a.kegiatan_siswa) as keg_siswa, SUM(a.spi) as spi, SUM(a.pembukaan_rek) as pembukaan_rek, SUM(a.terbayar) as terbayar, SUM((a.jumlah - a.terbayar)) as hutang FROM daftar_ulang as a, data_siswa as b WHERE a.NIS = b.NIS AND a.tahun_ajaran LIKE '{$tahunAjaran}'";
-
         return $this->db->query($sql)->result();
     }
-
-   
+ 
 }
