@@ -183,7 +183,7 @@ class Pemasukkan_lain_model extends CI_Model
         $this->db->insert('pemasukkan_lain', $data);
     }
 
-    public function getNamaKategori($idKategori){
+    public function getNamaKategori($idkategori){
         $sql = "SELECT nama_kategori_pemasukkan_lain as nama FROM `kategori_pemasukkan_lain` WHERE id_kategori_pemasukkan_lain = $idkategori";
             return $this->db->query($sql)->row();
     }

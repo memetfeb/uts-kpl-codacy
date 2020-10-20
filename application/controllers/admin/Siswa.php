@@ -186,7 +186,7 @@ class Siswa extends CI_Controller
     }
  
     // checkFileValidation
-    public function checkFileValidation($string) {
+    public function checkFileValidation() {
       $file_mimes = array('text/x-comma-separated-values', 
         'text/comma-separated-values', 
         'application/octet-stream', 
@@ -214,8 +214,4 @@ class Siswa extends CI_Controller
             return false;
         }
     }
-
-
-
-
 }
