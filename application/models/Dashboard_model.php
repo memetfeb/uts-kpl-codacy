@@ -2,7 +2,6 @@
 
 class Dashboard_model extends CI_Model
 {
-    private $_table = "data_siswa";
     public $nis;
     public $nama_siswa;
     public $tahun_masuk;

@@ -2,7 +2,6 @@
 
 class Pemasukkan_lain_model extends CI_Model
 {
-    private $_table = "bayar_spp";
     private $tableKatPL = "kategori_pemasukkan_lain";
     public $no_bayar_spp;
     public $nis;
@@ -11,7 +10,6 @@ class Pemasukkan_lain_model extends CI_Model
     public $tahun_spp;
     public $jumlah;
     public $status_spp;
-    
     public function rules()
     {
         return [
@@ -35,8 +33,6 @@ class Pemasukkan_lain_model extends CI_Model
             ['field' => 'status_spp',
             'label' => 'Status_spp',
             'rules' => 'required|numeric']
-
-
         ];
     }
 
@@ -61,7 +57,6 @@ class Pemasukkan_lain_model extends CI_Model
     public function getAll()
     {
         //return $this->db->get($this->_table)->result();
-
         $this->db->select("*");
         $this->db->where("a.id_kategori_pemasukkan_lain", "b.id_kategori_pemasukkan_lain", FALSE);
         $this->db->order_by('SUBSTRING(tanggal_pemasukkan_lain, -4) DESC, SUBSTRING(tanggal_pemasukkan_lain, -7, 2) DESC, SUBSTRING(tanggal_pemasukkan_lain, -10, 2) DESC'); 
@@ -83,12 +78,9 @@ class Pemasukkan_lain_model extends CI_Model
         $kategori = $post["kategori"];
         $bulan = $post["bulan"];
         $tahun = $post["tahun"];
-         
         if(($kategori == 0) and ($bulan == 0) and ($tahun == "")){
             //0000
             redirect(site_url('admin/pemasukkan_lain'));
-
-            
         }else if(($kategori == 0) and ($bulan == 0) and ($tahun != "")){
             //001
             $sql = "SELECT *, SUBSTRING(a.tanggal_pemasukkan_lain, -4) FROM pemasukkan_lain as a, kategori_pemasukkan_lain as b WHERE a.id_kategori_pemasukkan_lain = b.id_kategori_pemasukkan_lain AND SUBSTRING(a.tanggal_pemasukkan_lain, -4) = $tahun ORDER BY SUBSTRING(tanggal_pemasukkan_lain, -4) DESC, SUBSTRING(tanggal_pemasukkan_lain, -7, 2) DESC, SUBSTRING(tanggal_pemasukkan_lain, -10, 2) DESC";
@@ -118,7 +110,6 @@ class Pemasukkan_lain_model extends CI_Model
             $sql = "SELECT *, SUBSTRING(a.tanggal_pemasukkan_lain, -7, 2) FROM pemasukkan_lain as a, kategori_pemasukkan_lain as b WHERE a.id_kategori_pemasukkan_lain = b.id_kategori_pemasukkan_lain AND a.id_kategori_pemasukkan_lain = $kategori AND SUBSTRING(a.tanggal_pemasukkan_lain, -7, 2) = $bulan AND SUBSTRING(a.tanggal_pemasukkan_lain, -4) = $tahun ORDER BY SUBSTRING(tanggal_pemasukkan_lain, -4) DESC, SUBSTRING(tanggal_pemasukkan_lain, -7, 2) DESC, SUBSTRING(tanggal_pemasukkan_lain, -10, 2) DESC";
             return $this->db->query($sql)->result();
         }
-
     }
     
 
@@ -128,20 +119,6 @@ class Pemasukkan_lain_model extends CI_Model
             return $this->db->query($sql)->result();
      }
 
-    // public function save()
-    // {
-    //     $post = $this->input->post();
-    //     $this->nis = $post["nis"];
-    //     $this->kelas_bayar_spp = $post["kelas_bayar_spp"];
-    //     $this->tanggal_bayar_spp = $post["tanggal_bayar_spp"];
-    //     $this->bulan_spp = $post["bulan_spp"];
-    //     $this->tahun_spp = $post["tahun_spp"];
-    //     $this->jumlah = $post["biaya_spp"];
-    //     $this->status_spp = $post["status_spp"];
-        
-    //     $this->db->insert($this->_table, $this);
-    // }
-
     public function saveKategori()
     {
         $post = $this->input->post();
@@ -149,7 +126,6 @@ class Pemasukkan_lain_model extends CI_Model
             'nama_kategori_pemasukkan_lain' => $post["nama_kategori"],
             'kode_pemasukkan_lain' => $post["kode_kategori"]
         );
-
         $this->db->insert('kategori_pemasukkan_lain', $data);
     }
 

@@ -3,7 +3,6 @@
 class Daftar_ulang_model extends CI_Model
 {
     private $_table = "daftar_ulang";
-    private $tabel_SPP = "bayar_spp";
     public $no_bayar_daftar_ulang;
     public $nis;
     public $tahun_ajaran;
@@ -35,24 +34,6 @@ class Daftar_ulang_model extends CI_Model
 
         ];
     }
-
-    // public function rulesBayar()
-    // {
-    //     return [            
-    //         ['field' => 'tanggal_bayar_spp',
-    //         'label' => 'Tanggal_bayar_spp',
-    //         'rules' => 'required']
-    //     ];
-    // }
-
-    //     public function rulesBayar2()
-    // {
-    //     return [            
-    //         ['field' => 'status_spp',
-    //         'label' => 'Status_spp',
-    //         'rules' => 'required|numeric']
-    //     ];
-    // }
 
     public function getAll()
     {
