@@ -105,11 +105,8 @@ class Siswa extends CI_Controller
 
     public function setNaikKelas()
     {
-         $siswa = $this->siswa_model;
-       
             $this->siswa_model->naikKelas();
             $this->session->set_flashdata('success', 'Naik Kelas Berhasil');
-        
        redirect(site_url('admin/siswa'));
     }
 
@@ -159,14 +156,11 @@ class Siswa extends CI_Controller
                 // match excel sheet column
                 if ($flag == 1) {
                     for ($i = 2; $i <= $arrayCount; $i++) {
-                        $addresses = array();
                         $NIS = $SheetDataKey['NIS'];
                         $nama_siswa = $SheetDataKey['Nama_Siswa'];
                         $kelas = $SheetDataKey['Kelas'];
                         $nama_kelas = $SheetDataKey['Nama_Kelas'];
                         $biaya_spp = $SheetDataKey['Biaya_SPP'];
-
-                        
                         $NIS = filter_var(trim($allDataInSheet[$i][$NIS]), FILTER_SANITIZE_STRING);
                         $nama_siswa = filter_var(trim($allDataInSheet[$i][$nama_siswa]), FILTER_SANITIZE_STRING);
                         $kelas = filter_var(trim($allDataInSheet[$i][$kelas]), FILTER_SANITIZE_EMAIL);

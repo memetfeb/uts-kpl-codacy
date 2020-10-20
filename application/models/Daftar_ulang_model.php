@@ -497,7 +497,8 @@ class Daftar_ulang_model extends CI_Model
             $this->db->select("*");
             $this->db->where("s.NIS", $post["nis"], FALSE);
             $query = $this->db->get("data_siswa as s"); 
-            return $total = $query->num_rows();
+            $total = $query->num_rows();
+            return $total;
         }
 
     public function cekNamaTransaksi()

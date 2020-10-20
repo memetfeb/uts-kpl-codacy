@@ -320,7 +320,8 @@ public function cekNIS($nis){
     $this->db->select("*");
     $this->db->where("s.NIS", $nis, FALSE);
     $query = $this->db->get("data_siswa as s"); 
-    return $total = $query->num_rows();
+    $total = $query->num_rows();
+    return $total;
 }
 public function addSPP($nis, $tanggal, $jumlah,$bulan,$tahun)
 {   

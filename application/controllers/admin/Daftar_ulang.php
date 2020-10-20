@@ -103,11 +103,9 @@ class Daftar_ulang extends CI_Controller
 
     public function viewEditDaftarUlang($no)
         {
-            $daftar_ulang = $this->daftar_ulang_model;
             if (!isset($no)) 
                 redirect('admin/bayar_catering');
             $data["daftar_ulang_detail"] = $this->daftar_ulang_model->getByNoDaftarUlang($no);
-            
             $this->load->view("admin/daftar_ulang/edit_daftar_ulang", $data);
         }
 

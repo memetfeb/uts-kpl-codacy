@@ -14,8 +14,6 @@ class Rekapitulasi extends CI_Controller
         $this->load->model("daftar_ulang_model");
         $this->load->model("pemasukkan_lain_model");
         $this->load->model("pengeluaran_model");
-
-        
         $this->load->library('form_validation');
         $this->load->helper('rupiah_helper');
         $this->load->model("user_model");
@@ -160,9 +158,6 @@ class Rekapitulasi extends CI_Controller
         $bulan = $this->uri->segment(4);
         $tahun = $this->uri->segment(5);
         $tanggal = date('d F Y');
-
-        $rekapitulasi = $this->rekapitulasi_model;
-        
         $bayar_spp = $this->bayar_spp_model;
         $data["tanggal"] = $tanggal;
         $data["bulan"] = $bulan;
@@ -173,16 +168,11 @@ class Rekapitulasi extends CI_Controller
         $data["siswa_blmlunas"] = $bayar_spp->getBelumLunasByBulanTahun($bulan,$tahun);
         $data["spp_terbayar"] = $bayar_spp->getSPPTerbayar($bulan,$tahun);
         $data["spp_belum_terbayar"] = $bayar_spp->getSPPBelumTerbayar($bulan,$tahun);
-
-
         $data["rekapSPPBayarTotal"] = $bayar_spp->getRekapSPPTerbayar($bulan,$tahun);
         $data["rekapSPPBelumBayarTotal"] = $bayar_spp->getRekapSPPBelumTerbayar($bulan,$tahun);
         $data["rekapSPPTerbayarGroupByKelas"] = $bayar_spp->getRekapSPPTerbayarGroupKelas($bulan,$tahun);
         $data["rekapSPPBelumTerbayarGroupByKelas"] = $bayar_spp->getRekapSPPBelumTerbayarGroupKelas($bulan,$tahun);
-
         $data["title"] = "Rekap SPP $bulan-$tahun ";
-
-
         $this->load->view("admin/rekapitulasi/printSPPExcel", $data);
     }
 
