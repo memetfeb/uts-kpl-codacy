@@ -78,6 +78,8 @@ input[type=checkbox] {
 	background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
 	background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
 	background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -webkit-gradient(#f6f6f6 0, #fff 50px);
+	
 	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 	-o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 	-ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);

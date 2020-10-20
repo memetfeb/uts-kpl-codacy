@@ -205,6 +205,10 @@ a.button:hover {
   bottom: -20px; position: relative; padding-bottom: 20px; border-radius: 5px;
   /*background-image: linear-gradient(bottom, #FFFFFF 10px, #EEEEEE 82%);*/
   background-image: -webkit-linear-gradient(top, #EEEEEE, #FFFFFF);
+  background-image: -moz-linear-gradient(top, #EEEEEE, #FFFFFF);
+  background-image: -webkit-gradient(top, #EEEEEE, #FFFFFF);
+  background-image: -o-linear-gradient(top, #EEEEEE, #FFFFFF);
+  
   background-position: 0 55px; cursor: pointer;
   background-color: white;
 }
