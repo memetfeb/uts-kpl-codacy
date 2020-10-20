@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .daterangepicker .ranges li {
   color: #73879C; }
   .daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
@@ -89,7 +91,6 @@
 .calendar-exibit .calendar-table {
   padding: 0 0 4px 0; }
 
-@charset "UTF-8";
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot");
