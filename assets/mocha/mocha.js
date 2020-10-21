@@ -2466,7 +2466,7 @@ function Dot(runner) {
   });
 
   runner.on('fail', function(test, err){
-    if (++n % width == 0) process.stdout.write('\n  ');
+    if (++n % width === 0) process.stdout.write('\n  ');
     process.stdout.write(color('fail', Base.symbols.dot));
   });
 
@@ -5113,8 +5113,8 @@ Suite.prototype.clone = function(){
  */
 
 Suite.prototype.timeout = function(ms){
-  if (0 == arguments.length) return this._timeout;
-  if ('string' == typeof ms) ms = milliseconds(ms);
+  if (0 === arguments.length) return this._timeout;
+  if ('string' === typeof ms) ms = milliseconds(ms);
   debug('timeout %d', ms);
   this._timeout = parseInt(ms, 10);
   return this;

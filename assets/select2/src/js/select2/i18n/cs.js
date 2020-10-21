@@ -43,7 +43,7 @@ define(function () {
     maximumSelected: function (args) {
       var n = args.maximum;
 
-      if (n == 1) {
+      if (n === 1) {
         return 'Můžete zvolit jen jednu položku';
       } else if (n <= 4) {
         return 'Můžete zvolit maximálně ' + small(n, false) + ' položky';

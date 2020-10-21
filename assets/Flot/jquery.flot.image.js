@@ -107,7 +107,7 @@ Google Maps).
                 
                 loaded[url] = this;
                 
-                if (missing == 0)
+                if (missing === 0)
                     callback(loaded);
             };
 

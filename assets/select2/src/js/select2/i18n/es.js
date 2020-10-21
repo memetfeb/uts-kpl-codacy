@@ -22,7 +22,7 @@ define(function () {
 
       var message = 'Por favor, introduzca ' + remainingChars + ' car';
 
-      if (remainingChars == 1) {
+      if (remainingChars === 1) {
         message += 'ácter';
       } else {
         message += 'acteres';

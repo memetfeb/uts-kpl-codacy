@@ -1,7 +1,7 @@
 define(function () {
   // Serbian
   function ending (count, one, some, many) {
-    if (count % 10 === 1 && count % 100 != 11) {
+    if (count % 10 === 1 && count % 100 !== 11) {
       return one;
     }
 

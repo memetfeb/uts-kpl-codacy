@@ -383,7 +383,7 @@
                 axis = yaxes[i];
                 if (axis && axis.used) {
                     key = "y" + axis.n;
-                    if (pos[key] == null && axis.n == 1)
+                    if (pos[key] === null && axis.n === 1)
                         key = "y";
 
                     if (pos[key] != null) {
@@ -1613,11 +1613,11 @@
 
                     if (v < axis.min || v > axis.max
                         // skip those lying on the axes if we got a border
-                        || (t == "full" && bw > 0
-                        && (v == axis.min || v == axis.max)))
+                        || (t === "full" && bw > 0
+                        && (v === axis.min || v === axis.max)))
                         continue;
 
-                    if (axis.direction == "x") {
+                    if (axis.direction === "x") {
                         x = axis.p2c(v);
                         yoff = t == "full" ? -plotHeight : t;
 
@@ -1628,12 +1628,12 @@
                         y = axis.p2c(v);
                         xoff = t == "full" ? -plotWidth : t;
 
-                        if (axis.position == "left")
+                        if (axis.position === "left")
                             xoff = -xoff;
                     }
 
-                    if (ctx.lineWidth == 1) {
-                        if (axis.direction == "x")
+                    if (ctx.lineWidth === 1) {
+                        if (axis.direction === "x")
                             x = Math.floor(x) + 0.5;
                         else
                             y = Math.floor(y) + 0.5;

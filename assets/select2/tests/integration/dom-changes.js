@@ -80,7 +80,7 @@ test('adding a new selected option changes the value', function (assert) {
   var asyncDone = null;
   var syncDone = assert.async();
 
-  if (expected != 2) {
+  if (expected !== 2) {
     asyncDone = assert.async();
   }
 
