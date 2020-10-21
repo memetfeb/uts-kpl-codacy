@@ -1398,7 +1398,7 @@ getJasmineRequireObj().Expectation = function() {
         }
       }
 
-      if (expected.length == 1) {
+      if (expected.length === 1) {
         expected = expected[0];
       }
 
@@ -3056,7 +3056,7 @@ getJasmineRequireObj().toThrow = function(j$) {
           return result;
         }
 
-        if (arguments.length == 1) {
+        if (arguments.length === 1) {
           result.pass = true;
           result.message = function() { return 'Expected function not to throw, but it threw ' + j$.pp(thrown) + '.'; };
 
@@ -3134,7 +3134,7 @@ getJasmineRequireObj().toThrowError = function(j$) {
       var expected = null,
           errorType = null;
 
-      if (arguments.length == 2) {
+      if (arguments.length === 2) {
         expected = arguments[1];
         if (isAnErrorType(expected)) {
           errorType = expected;

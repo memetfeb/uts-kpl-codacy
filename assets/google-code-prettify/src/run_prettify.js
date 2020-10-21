@@ -757,7 +757,7 @@ var IN_GLOBAL_SCOPE = false;
       
         function walk(node) {
           var type = node.nodeType;
-          if (type == 1) {  // Element
+          if (type === 1) {  // Element
             if (nocode.test(node.className)) { return; }
             for (var child = node.firstChild; child; child = child.nextSibling) {
               walk(child);
@@ -768,7 +768,7 @@ var IN_GLOBAL_SCOPE = false;
               spans[k << 1] = length++;
               spans[(k++ << 1) | 1] = node;
             }
-          } else if (type == 3 || type == 4) {  // Text
+          } else if (type === 3 || type === 4) {  // Text
             var text = node.nodeValue;
             if (text.length) {
               if (!isPreformatted) {
@@ -1226,7 +1226,7 @@ var IN_GLOBAL_SCOPE = false;
       
         function walk(node) {
           var type = node.nodeType;
-          if (type == 1 && !nocode.test(node.className)) {  // Element
+          if (type === 1 && !nocode.test(node.className)) {  // Element
             if ('br' === node.nodeName) {
               breakAfter(node);
               // Discard the <BR> since it is now flush against a </LI>.
@@ -1238,7 +1238,7 @@ var IN_GLOBAL_SCOPE = false;
                 walk(child);
               }
             }
-          } else if ((type == 3 || type == 4) && isPreformatted) {  // Text
+          } else if ((type === 3 || type === 4) && isPreformatted) {  // Text
             var text = node.nodeValue;
             var match = text.match(lineBreak);
             if (match) {

@@ -217,7 +217,7 @@ Licensed under the MIT license.
 									}
 								}
 
-								if (positions.length == 0) {
+								if (positions.length === 0) {
 									delete styleCache[key];
 								}
 							}
@@ -655,7 +655,7 @@ Licensed under the MIT license.
             var res = {}, i;
             $.each(xaxes.concat(yaxes), function (_, axis) {
                 if (axis)
-                    res[axis.direction + (axis.n != 1 ? axis.n : "") + "axis"] = axis;
+                    res[axis.direction + (axis.n !== 1 ? axis.n : "") + "axis"] = axis;
             });
             return res;
         };
@@ -950,10 +950,10 @@ Licensed under the MIT license.
                 axis = xaxes[i];
                 if (axis && axis.used) {
                     key = "x" + axis.n;
-                    if (pos[key] == null && axis.n == 1)
+                    if (pos[key] === null && axis.n === 1)
                         key = "x";
 
-                    if (pos[key] != null) {
+                    if (pos[key] !== null) {
                         res.left = axis.p2c(pos[key]);
                         break;
                     }
@@ -1030,7 +1030,7 @@ Licensed under the MIT license.
                 // Reset the variation after every few cycles, or else
                 // it will end up producing only white or black colors.
 
-                if (i % colorPoolSize == 0 && i) {
+                if (i % colorPoolSize === 0 && i) {
                     if (variation >= 0) {
                         if (variation < 0.5) {
                             variation = -variation - 0.2;
@@ -1647,9 +1647,9 @@ Licensed under the MIT license.
                 max = +(opts.max != null ? opts.max : axis.datamax),
                 delta = max - min;
 
-            if (delta == 0.0) {
+            if (delta === 0.0) {
                 // degenerate case
-                var widen = max == 0 ? 1 : 0.01;
+                var widen = max === 0 ? 1 : 0.01;
 
                 if (opts.min == null)
                     min -= widen;
@@ -1904,7 +1904,7 @@ Licensed under the MIT license.
                 axis = axes[i];
                 if (axis.direction == coord) {
                     key = coord + axis.n + "axis";
-                    if (!ranges[key] && axis.n == 1)
+                    if (!ranges[key] && axis.n === 1)
                         key = coord + "axis"; // support x1axis as xaxis
                     if (ranges[key]) {
                         from = ranges[key].from;
@@ -2029,7 +2029,7 @@ Licensed under the MIT license.
             for (var j = 0; j < axes.length; ++j) {
                 var axis = axes[j], box = axis.box,
                     t = axis.tickLength, x, y, xoff, yoff;
-                if (!axis.show || axis.ticks.length == 0)
+                if (!axis.show || axis.ticks.length === 0)
                     continue;
 
                 ctx.lineWidth = 1;
@@ -2055,13 +2055,13 @@ Licensed under the MIT license.
                     ctx.strokeStyle = axis.options.color;
                     ctx.beginPath();
                     xoff = yoff = 0;
-                    if (axis.direction == "x")
+                    if (axis.direction === "x")
                         xoff = plotWidth + 1;
                     else
                         yoff = plotHeight + 1;
 
-                    if (ctx.lineWidth == 1) {
-                        if (axis.direction == "x") {
+                    if (ctx.lineWidth === 1) {
+                        if (axis.direction === "x") {
                             y = Math.floor(y) + 0.5;
                         } else {
                             x = Math.floor(x) + 0.5;
@@ -2530,7 +2530,7 @@ Licensed under the MIT license.
             // Doing the conditional here allows the shadow setting to still be 
             // optional even with a lineWidth of 0.
 
-            if( lw == 0 )
+            if( lw === 0 )
                 lw = 0.0001;
 
             if (lw > 0 && sw > 0) {
@@ -2762,7 +2762,7 @@ Licensed under the MIT license.
 
                 var entry = entries[i];
 
-                if (i % options.legend.noColumns == 0) {
+                if (i % options.legend.noColumns === 0) {
                     if (rowStarted)
                         fragments.push('</tr>');
                     fragments.push('<tr>');
@@ -2778,7 +2778,7 @@ Licensed under the MIT license.
             if (rowStarted)
                 fragments.push('</tr>');
 
-            if (fragments.length == 0)
+            if (fragments.length === 0)
                 return;
 
             var table = '<table style="font-size:smaller;color:' + options.grid.color + '">' + fragments.join("") + '</table>';
@@ -2799,12 +2799,12 @@ Licensed under the MIT license.
                 else if (p.charAt(1) == "w")
                     pos += 'left:' + (m[0] + plotOffset.left) + 'px;';
                 var legend = $('<div class="legend">' + table.replace('style="', 'style="position:absolute;' + pos +';') + '</div>').appendTo(placeholder);
-                if (options.legend.backgroundOpacity != 0.0) {
+                if (options.legend.backgroundOpacity !== 0.0) {
                     // put in the transparent background
                     // separately to avoid blended labels and
                     // label boxes
                     var c = options.legend.backgroundColor;
-                    if (c == null) {
+                    if (c === null) {
                         c = options.grid.backgroundColor;
                         if (c && typeof c == "string")
                             c = $.color.parse(c);
@@ -2929,7 +2929,7 @@ Licensed under the MIT license.
         function onMouseMove(e) {
             if (options.grid.hoverable)
                 triggerClickHoverEvent("plothover", e,
-                                       function (s) { return s["hoverable"] != false; });
+                                       function (s) { return s["hoverable"] !== false; });
         }
 
         function onMouseLeave(e) {
@@ -2940,7 +2940,7 @@ Licensed under the MIT license.
 
         function onClick(e) {
             triggerClickHoverEvent("plotclick", e,
-                                   function (s) { return s["clickable"] != false; });
+                                   function (s) { return s["clickable"] !== false; });
         }
 
         // trigger click or hover event (they send the same parameters

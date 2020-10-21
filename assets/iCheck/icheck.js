@@ -234,8 +234,8 @@
             return false;
 
           // Keydown
-          } else if (type == 'keydown' && key == 32) {
-            if (!(node[_type] == _radio && node[_checked])) {
+          } else if (type === 'keydown' && key === 32) {
+            if (!(node[_type] === _radio && node[_checked])) {
               if (node[_checked]) {
                 off(self, _checked);
               } else {

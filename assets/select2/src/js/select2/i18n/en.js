@@ -9,7 +9,7 @@ define(function () {
 
       var message = 'Please delete ' + overChars + ' character';
 
-      if (overChars != 1) {
+      if (overChars !== 1) {
         message += 's';
       }
 
@@ -28,7 +28,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'You can only select ' + args.maximum + ' item';
 
-      if (args.maximum != 1) {
+      if (args.maximum !== 1) {
         message += 's';
       }
 

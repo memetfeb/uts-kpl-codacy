@@ -103,7 +103,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 										}
 									}
 
-									if (positions.length == 0) {
+									if (positions.length === 0) {
 										delete styleCache[key];
 									}
 								}

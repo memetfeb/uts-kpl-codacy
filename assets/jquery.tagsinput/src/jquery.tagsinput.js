@@ -87,7 +87,7 @@
 
 				if (options.unique) {
 					var skipTag = $(this).tagExist(value);
-					if(skipTag == true) {
+					if(skipTag === true) {
 					    //Marks fake input as not_valid to let styling it
     				    $('#'+id+'_tag').addClass('not_valid');
     				}
@@ -95,7 +95,7 @@
 					var skipTag = false;
 				}
 
-				if (value !='' && skipTag != true) {
+				if (value !=='' && skipTag !== true) {
                     $('<span>').addClass('tag').append(
                         $('<span>').text(value).append('&nbsp;&nbsp;'),
                         $('<a>', {
@@ -315,7 +315,7 @@
 				//Delete last tag on backspace
 				data.removeWithBackspace && $(data.fake_input).bind('keydown', function(event)
 				{
-					if(event.keyCode == 8 && $(this).val() == '')
+					if(event.keyCode === 8 && $(this).val() === '')
 					{
 						 event.preventDefault();
 						 var last_tag = $(this).closest('.tagsinput').find('.tag:last').text();
@@ -330,7 +330,7 @@
 				//Removes the not_valid class when user changes the value of the fake input
 				if(data.unique) {
 				    $(data.fake_input).keydown(function(event){
-				        if(event.keyCode == 8 || String.fromCharCode(event.which).match(/\w+|[áéíóúÁÉÍÓÚñÑ,/]+/)) {
+				        if(event.keyCode === 8 || String.fromCharCode(event.which).match(/\w+|[áéíóúÁÉÍÓÚñÑ,/]+/)) {
 				            $(this).removeClass('not_valid');
 				        }
 				    });
@@ -369,7 +369,7 @@
      */
    var _checkDelimiter = function(event){
       var found = false;
-      if (event.which == 13) {
+      if (event.which === 13) {
          return true;
       }
 

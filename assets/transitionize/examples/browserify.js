@@ -23,7 +23,7 @@ window.onload = function() {
   elem.addEventListener('click', function() {
     var position = parseInt(elem.style.left) || 0;
 
-    if (position == 0) {
+    if (position === 0) {
       this.style.left = this.parentNode.offsetWidth - this.offsetWidth + 'px';
       this.style.backgroundColor = '#53e7d0';
 

@@ -537,7 +537,7 @@ var fdSlider = (function() {
                 function onKeyPress(e) {                        
                         e = e || window.event;  
                         // Let all non-hijacked keyboard events pass                       
-                        if((e.keyCode >= 33 && e.keyCode <= 40) || !kbEnabled || e.keyCode == 45 || e.keyCode == 46) {                                 
+                        if((e.keyCode >= 33 && e.keyCode <= 40) || !kbEnabled || e.keyCode === 45 || e.keyCode === 46) {                                 
                                 return stopEvent(e);
                         };
                         return true;
@@ -549,20 +549,20 @@ var fdSlider = (function() {
                         e = e || window.event;
                         var kc = e.keyCode != null ? e.keyCode : e.charCode;
                         
-                        if ( kc < 33 || (kc > 40 && (kc != 45 && kc != 46))) return true;
+                        if ( kc < 33 || (kc > 40 && (kc !== 45 && kc !== 46))) return true;
 
                         var value = getWorkingValueFromInput();
                         
-                        if( kc == 37 || kc == 40 || kc == 46 || kc == 34) {
+                        if( kc === 37 || kc === 40 || kc === 46 || kc === 34) {
                                 // left, down, ins, page down                                                              
-                                value -= (e.ctrlKey || kc == 34 ? +maxStep : +step);                                   
-                        } else if( kc == 39 || kc == 38 || kc == 45 || kc == 33) {
+                                value -= (e.ctrlKey || kc === 34 ? +maxStep : +step);                                   
+                        } else if( kc === 39 || kc === 38 || kc === 45 || kc === 33) {
                                 // right, up, del, page up                                                                  
-                                value += (e.ctrlKey || kc == 33 ? +maxStep : +step);                                
-                        } else if( kc == 35 ) {
+                                value += (e.ctrlKey || kc === 33 ? +maxStep : +step);                                
+                        } else if( kc === 35 ) {
                                 // max                                
                                 value = rMax;                                
-                        } else if( kc == 36 ) {
+                        } else if( kc === 36 ) {
                                 // min                                
                                 value = rMin;
                         };  
@@ -600,12 +600,12 @@ var fdSlider = (function() {
                         var targ;                          
                         if (e.target) targ = e.target;
                         else if (e.srcElement) targ = e.srcElement;
-                        if(targ.nodeType == 3) targ = targ.parentNode;
+                        if(targ.nodeType === 3) targ = targ.parentNode;
 
                         // Are we using touchEvents
                         if(e.touches) {                                            
                                 // Skip gestures                                
-                                if(e.targetTouches && e.targetTouches.length != 1) {                                        
+                                if(e.targetTouches && e.targetTouches.length !== 1) {                                        
                                         return false;
                                 };
                                                                 
@@ -853,7 +853,7 @@ var fdSlider = (function() {
                         
                         handle.style[vertical ? "top" : "left"] = (px || 0) + "px";
                         redrawRange();                                      
-                        setInputValue((tagName == "select" || step == 1) ? Math.round(val) : val);                         
+                        setInputValue((tagName === "select" || step === 1) ? Math.round(val) : val);                         
                 };                
                 
                 // Calculates pixel position according to form element value
@@ -1132,7 +1132,7 @@ var fdSlider = (function() {
                         };                                               
                         
                         // Is the form element initially disabled
-                        if(inp.getAttribute("disabled") == true) {                         
+                        if(inp.getAttribute("disabled") === true) {                         
                                 disableSlider(true);
                         } else {                                  
                                 enableSlider(true);

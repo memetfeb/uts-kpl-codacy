@@ -6,7 +6,7 @@ define(function () {
 
       var message = 'Idatzi ';
 
-      if (overChars == 1) {
+      if (overChars === 1) {
         message += 'karaktere bat';
       } else {
         message += overChars + ' karaktere';
@@ -21,7 +21,7 @@ define(function () {
 
       var message = 'Idatzi ';
 
-      if (remainingChars == 1) {
+      if (remainingChars === 1) {
         message += 'karaktere bat';
       } else {
         message += remainingChars + ' karaktere';

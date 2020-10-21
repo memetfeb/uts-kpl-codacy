@@ -18,7 +18,7 @@ define(function () {
     inputTooLong: function (args) {
       var n = args.input.length - args.maximum;
 
-      if (n == 1) {
+      if (n === 1) {
         return 'Prosím zadejte o jeden znak méně';
       } else if (n <= 4) {
         return 'Prosím zadejte o ' + small(n, true) + ' znaky méně';

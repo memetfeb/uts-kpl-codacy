@@ -257,7 +257,7 @@ if (!document.createElement('canvas').getContext) {
         str += dec2hex[Number(guts[i])];
       }
 
-      if (guts.length == 4 && styleString.substr(3, 1) == 'a') {
+      if (guts.length === 4 && styleString.substr(3, 1) === 'a') {
         alpha = guts[3];
       }
     } else {
@@ -491,13 +491,13 @@ if (!document.createElement('canvas').getContext) {
     image.runtimeStyle.width = oldRuntimeWidth;
     image.runtimeStyle.height = oldRuntimeHeight;
 
-    if (arguments.length == 3) {
+    if (arguments.length === 3) {
       dx = arguments[1];
       dy = arguments[2];
       sx = sy = 0;
       sw = dw = w;
       sh = dh = h;
-    } else if (arguments.length == 5) {
+    } else if (arguments.length === 5) {
       dx = arguments[1];
       dy = arguments[2];
       dw = arguments[3];
@@ -505,7 +505,7 @@ if (!document.createElement('canvas').getContext) {
       sx = sy = 0;
       sw = w;
       sh = h;
-    } else if (arguments.length == 9) {
+    } else if (arguments.length === 9) {
       sx = arguments[1];
       sy = arguments[2];
       sw = arguments[3];
@@ -539,7 +539,7 @@ if (!document.createElement('canvas').getContext) {
     // The following check doesn't account for skews (which don't exist
     // in the canvas spec (yet) anyway.
 
-    if (this.m_[0][0] != 1 || this.m_[0][1]) {
+    if (this.m_[0][0] !== 1 || this.m_[0][1]) {
       var filter = [];
 
       // Note the 12/21 reversal

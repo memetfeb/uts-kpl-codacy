@@ -103,7 +103,7 @@
             this.zeroAxis = zeroAxis = options.get('zeroAxis', true);
             if (min <= 0 && max >= 0 && zeroAxis) {
                 xaxisOffset = 0;
-            } else if (zeroAxis == false) {
+            } else if (zeroAxis === false) {
                 xaxisOffset = min;
             } else if (min > 0) {
                 xaxisOffset = min;

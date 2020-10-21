@@ -9,7 +9,7 @@ define(function () {
 
       var message = 'Si us plau, elimina ' + overChars + ' car';
 
-      if (overChars == 1) {
+      if (overChars === 1) {
         message += 'àcter';
       } else {
         message += 'àcters';
@@ -22,7 +22,7 @@ define(function () {
 
       var message = 'Si us plau, introdueix ' + remainingChars + ' car';
 
-      if (remainingChars == 1) {
+      if (remainingChars === 1) {
         message += 'àcter';
       } else {
         message += 'àcters';
@@ -36,7 +36,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Només es pot seleccionar ' + args.maximum + ' element';
 
-      if (args.maximum != 1) {
+      if (args.maximum !== 1) {
         message += 's';
       }
 

@@ -14,7 +14,7 @@ test('adding a new unselected option changes nothing', function (assert) {
   var asyncDone = null;
   var syncDone = assert.async();
 
-  if (expected != 2) {
+  if (expected !== 2) {
     asyncDone = assert.async();
   }
 

@@ -173,7 +173,7 @@ define(function (require) {
 
         while (node) {
             if (
-                node.nodeType != 1 ||
+                node.nodeType !== 1 ||
                 node.nodeName.toLowerCase() != tagName.toLowerCase()
             ) {
                 node = node.nextSibling;

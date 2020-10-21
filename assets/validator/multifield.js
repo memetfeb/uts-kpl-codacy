@@ -24,7 +24,7 @@
 			setCaret( $(this).prev(':text')[0], 100);
 		
 		// if the 'right' arrow key was pressed and caret was at the end -> advance to the next field
-		else if( e.keyCode == 39 && sel[1] == this.value.length )	
+		else if( e.keyCode === 39 && sel[1] === this.value.length )	
 			setCaret( $(this).next(':text')[0], 0);
 		
 		// automatically move to the next field once user has filled the current one completely		

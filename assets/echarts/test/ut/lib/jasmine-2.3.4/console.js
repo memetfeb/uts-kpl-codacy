@@ -140,7 +140,7 @@ getJasmineRequireObj().ConsoleReporter = function() {
     }
 
     function plural(str, count) {
-      return count == 1 ? str : str + 's';
+      return count === 1 ? str : str + 's';
     }
 
     function repeat(thing, times) {

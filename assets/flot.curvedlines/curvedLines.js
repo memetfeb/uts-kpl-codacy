@@ -125,7 +125,7 @@ ____________________________________________________
 			//this can happen if somebody upgrades to v1.x.x without adjusting the parameters or uses old examples
             var invalidLegacyOptions = hasInvalidParameters(series.curvedLines);
 
-			if (!invalidLegacyOptions && series.curvedLines.apply == true && series.originSeries === undefined && nrPoints > (1 + EPSILON)) {
+			if (!invalidLegacyOptions && series.curvedLines.apply === true && series.originSeries === undefined && nrPoints > (1 + EPSILON)) {
 				if (series.lines.fill) {
 
 					var pointsTop = calculateCurvePoints(datapoints, series.curvedLines, 1);
@@ -168,7 +168,7 @@ ____________________________________________________
 		}
 
 		function calculateCurvePoints(datapoints, curvedLinesOptions, yPos) {
-			if ( typeof curvedLinesOptions.legacyOverride != 'undefined' && curvedLinesOptions.legacyOverride != false) {
+			if ( typeof curvedLinesOptions.legacyOverride !== 'undefined' && curvedLinesOptions.legacyOverride != false) {
 				var defaultOptions = {
 					fit : false,
 					curvePointFactor : 20,
@@ -393,7 +393,7 @@ ____________________________________________________
 
 			for (var i = 1; i < n - 1; ++i) {
 				var d = (xdata[i + 1] - xdata[i - 1]);
-				if (d == 0) {
+				if (d === 0) {
 					//point before current point and after current point need some space in between
 					return [];
 				}
@@ -441,7 +441,7 @@ ____________________________________________________
 				//found point one to the left and one to the right of generated new point
 				var h = (xdata[max] - xdata[min]);
 
-				if (h == 0) {
+				if (h === 0) {
 					//similar to above two points from original x data need some space between them
 					return [];
 				}

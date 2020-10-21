@@ -181,7 +181,7 @@ More detail and specific examples can be found in the included HTML file.
 				// new one; this is more efficient and preserves any extra data
 				// that the user may have stored in higher indexes.
 
-				if ($.isArray(value) && value.length == 1) {
+				if ($.isArray(value) && value.length === 1) {
     				value = value[0];
 				}
 
@@ -470,7 +470,7 @@ More detail and specific examples can be found in the included HTML file.
 
 					function drawLabel(slice, startAngle, index) {
 
-						if (slice.data[0][1] == 0) {
+						if (slice.data[0][1] === 0) {
 							return true;
 						}
 
@@ -508,7 +508,7 @@ More detail and specific examples can be found in the included HTML file.
 							return false;
 						}
 
-						if (options.series.pie.label.background.opacity != 0) {
+						if (options.series.pie.label.background.opacity !== 0) {
 
 							// put in the transparent background separately to avoid blended labels and label boxes
 

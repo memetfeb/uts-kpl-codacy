@@ -9,10 +9,10 @@ define(function () {
 
       var message = 'Παρακαλώ διαγράψτε ' + overChars + ' χαρακτήρ';
 
-      if (overChars == 1) {
+      if (overChars === 1) {
         message += 'α';
       }
-      if (overChars != 1) {
+      if (overChars !== 1) {
         message += 'ες';
       }
 
@@ -32,11 +32,11 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Μπορείτε να επιλέξετε μόνο ' + args.maximum + ' επιλογ';
 
-      if (args.maximum == 1) {
+      if (args.maximum === 1) {
         message += 'ή';
       }
 
-      if (args.maximum != 1) {
+      if (args.maximum !== 1) {
         message += 'ές';
       }
 
