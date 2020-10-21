@@ -396,7 +396,7 @@ if (!document.createElement('canvas').getContext) {
     var end = styleString.indexOf(')', start + 1);
     var parts = styleString.substring(start + 1, end).split(',');
     // add alpha if needed
-    if (parts.length != 4 || styleString.charAt(3) != 'a') {
+    if (parts.length !== 4 || styleString.charAt(3) != 'a') {
       parts[3] = 1;
     }
     return parts;
@@ -417,7 +417,7 @@ if (!document.createElement('canvas').getContext) {
       h++;
     s = clamp(percent(parts[1]), 0, 1);
     l = clamp(percent(parts[2]), 0, 1);
-    if (s == 0) {
+    if (s === 0) {
       r = g = b = l; // achromatic
     } else {
       var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
@@ -785,13 +785,13 @@ if (!document.createElement('canvas').getContext) {
     image.runtimeStyle.width = oldRuntimeWidth;
     image.runtimeStyle.height = oldRuntimeHeight;
 
-    if (arguments.length == 3) {
+    if (arguments.length === 3) {
       dx = arguments[1];
       dy = arguments[2];
       sx = sy = 0;
       sw = dw = w;
       sh = dh = h;
-    } else if (arguments.length == 5) {
+    } else if (arguments.length === 5) {
       dx = arguments[1];
       dy = arguments[2];
       dw = arguments[3];
@@ -799,7 +799,7 @@ if (!document.createElement('canvas').getContext) {
       sx = sy = 0;
       sw = w;
       sh = h;
-    } else if (arguments.length == 9) {
+    } else if (arguments.length === 9) {
       sx = arguments[1];
       sy = arguments[2];
       sw = arguments[3];
@@ -833,8 +833,8 @@ if (!document.createElement('canvas').getContext) {
     // The following check doesn't account for skews (which don't exist
     // in the canvas spec (yet) anyway.
 
-    if (this.m_[0][0] != 1 || this.m_[0][1] ||
-        this.m_[1][1] != 1 || this.m_[1][0]) {
+    if (this.m_[0][0] !== 1 || this.m_[0][1] ||
+        this.m_[1][1] !== 1 || this.m_[1][0]) {
       var filter = [];
 
       // Note the 12/21 reversal
@@ -903,7 +903,7 @@ if (!document.createElement('canvas').getContext) {
       var newSeq = false;
 
       for (var i = j; i < Math.min(j + chunkSize, this.currentPath_.length); i++) {
-        if (i % chunkSize == 0 && i > 0) { // move into position for next chunk
+        if (i % chunkSize === 0 && i > 0) { // move into position for next chunk
           lineStr.push(' m ', mr(this.currentPath_[i-1].x), ',', mr(this.currentPath_[i-1].y));
         }
 
@@ -1386,7 +1386,7 @@ if (!document.createElement('canvas').getContext) {
   }
 
   function assertImageIsValid(img) {
-    if (!img || img.nodeType != 1 || img.tagName != 'IMG') {
+    if (!img || img.nodeType !== 1 || img.tagName !== 'IMG') {
       throwException('TYPE_MISMATCH_ERR');
     }
     if (img.readyState != 'complete') {

@@ -517,7 +517,7 @@
 
             // if this field is linked to another field (their values should be the same)
             if( data.valid && data.validateLinked ){
-                if( data['validateLinked'].indexOf('#') == 0 )
+                if( data['validateLinked'].indexOf('#') === 0 )
                     linkedTo = document.body.querySelector(data['validateLinked'])
                 else if( form.length )
                     linkedTo = form.querySelector('[name=' + data['validateLinked'] + ']');

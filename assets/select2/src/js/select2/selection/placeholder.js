@@ -30,7 +30,7 @@ define([
 
   Placeholder.prototype.update = function (decorated, data) {
     var singlePlaceholder = (
-      data.length == 1 && data[0].id != this.placeholder.id
+      data.length === 1 && data[0].id !== this.placeholder.id
     );
     var multipleSelections = data.length > 1;
 

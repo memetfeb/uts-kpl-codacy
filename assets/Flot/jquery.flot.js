@@ -964,7 +964,7 @@ Licensed under the MIT license.
                 axis = yaxes[i];
                 if (axis && axis.used) {
                     key = "y" + axis.n;
-                    if (pos[key] == null && axis.n == 1)
+                    if (pos[key] === null && axis.n === 1)
                         key = "y";
 
                     if (pos[key] != null) {
@@ -2105,8 +2105,8 @@ Licensed under the MIT license.
                             xoff = -xoff;
                     }
 
-                    if (ctx.lineWidth == 1) {
-                        if (axis.direction == "x")
+                    if (ctx.lineWidth === 1) {
+                        if (axis.direction === "x")
                             x = Math.floor(x) + 0.5;
                         else
                             y = Math.floor(y) + 0.5;
@@ -2194,7 +2194,7 @@ Licensed under the MIT license.
 
                 surface.removeText(layer);
 
-                if (!axis.show || axis.ticks.length == 0)
+                if (!axis.show || axis.ticks.length === 0)
                     return;
 
                 for (var i = 0; i < axis.ticks.length; ++i) {

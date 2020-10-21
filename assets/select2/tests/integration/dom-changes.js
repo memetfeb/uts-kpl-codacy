@@ -46,7 +46,7 @@ test('adding a new unselected option changes nothing', function (assert) {
       'The selection changed to something other than One'
     );
 
-    if (expected != 2) {
+    if (expected !== 2) {
       asyncDone();
     }
   });

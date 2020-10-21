@@ -46,7 +46,7 @@ define(["./raphael.core"], function(R) {
                         isMove = command.toLowerCase() == "m",
                         res = map[command];
                     args.replace(val, function (value) {
-                        if (isMove && vals.length == 2) {
+                        if (isMove && vals.length === 2) {
                             res += vals + map[command == "m" ? "l" : "L"];
                             vals = [];
                         }
@@ -193,7 +193,7 @@ define(["./raphael.core"], function(R) {
         }
         if ("clip-rect" in params) {
             var rect = Str(params["clip-rect"]).split(separator);
-            if (rect.length == 4) {
+            if (rect.length === 4) {
                 rect[2] = +rect[2] + (+rect[0]);
                 rect[3] = +rect[3] + (+rect[1]);
                 var div = node.clipRect || R._g.doc.createElement("div"),
@@ -288,7 +288,7 @@ define(["./raphael.core"], function(R) {
             var stroke = (node.getElementsByTagName("stroke") && node.getElementsByTagName("stroke")[0]),
             newstroke = false;
             !stroke && (newstroke = stroke = createNode("stroke"));
-            if ((params.stroke && params.stroke != "none") ||
+            if ((params.stroke && params.stroke !== "none") ||
                 params["stroke-width"] ||
                 params["stroke-opacity"] != null ||
                 params["stroke-dasharray"] ||
@@ -297,7 +297,7 @@ define(["./raphael.core"], function(R) {
                 params["stroke-linecap"]) {
                 stroke.on = true;
             }
-            (params.stroke == "none" || params.stroke === null || stroke.on == null || params.stroke == 0 || params["stroke-width"] == 0) && (stroke.on = false);
+            (params.stroke === "none" || params.stroke === null || stroke.on === null || params.stroke === 0 || params["stroke-width"] === 0) && (stroke.on = false);
             var strokeColor = R.getRGB(params.stroke);
             stroke.on && params.stroke && (stroke.color = strokeColor.hex);
             opacity = ((+a["stroke-opacity"] + 1 || 2) - 1) * ((+a.opacity + 1 || 2) - 1) * ((+strokeColor.o + 1 || 2) - 1);
@@ -964,7 +964,7 @@ define(["./raphael.core"], function(R) {
         res.span.style.cssText = "position:absolute;left:-9999em;top:-9999em;padding:0;margin:0;line-height:1;";
         c.appendChild(res.span);
         cs.cssText = R.format("top:0;left:0;width:{0};height:{1};display:inline-block;position:relative;clip:rect(0 {0} {1} 0);overflow:hidden", width, height);
-        if (container == 1) {
+        if (container === 1) {
             R._g.doc.body.appendChild(c);
             cs.left = x + "px";
             cs.top = y + "px";

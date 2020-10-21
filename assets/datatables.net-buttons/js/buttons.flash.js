@@ -425,7 +425,7 @@ ZeroClipboard_TableTools.Client.prototype = {
 					// actual function reference
 					func(this, args);
 				}
-				else if ((typeof(func) == 'object') && (func.length == 2)) {
+				else if ((typeof(func) === 'object') && (func.length === 2)) {
 					// PHP style object + method, i.e. [myObject, 'myMethod']
 					func[0][ func[1] ](this, args);
 				}

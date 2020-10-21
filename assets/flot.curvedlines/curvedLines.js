@@ -168,7 +168,7 @@ ____________________________________________________
 		}
 
 		function calculateCurvePoints(datapoints, curvedLinesOptions, yPos) {
-			if ( typeof curvedLinesOptions.legacyOverride !== 'undefined' && curvedLinesOptions.legacyOverride != false) {
+			if ( typeof curvedLinesOptions.legacyOverride !== 'undefined' && curvedLinesOptions.legacyOverride !== false) {
 				var defaultOptions = {
 					fit : false,
 					curvePointFactor : 20,

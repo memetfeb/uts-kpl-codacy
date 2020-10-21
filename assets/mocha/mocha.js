@@ -774,7 +774,7 @@ function Context(){}
  */
 
 Context.prototype.runnable = function(runnable){
-  if (0 == arguments.length) return this._runnable;
+  if (0 === arguments.length) return this._runnable;
   this.test = this._runnable = runnable;
   return this;
 };
@@ -868,7 +868,7 @@ Hook.prototype.constructor = Hook;
  */
 
 Hook.prototype.error = function(err){
-  if (0 == arguments.length) {
+  if (0 === arguments.length) {
     var err = this._error;
     this._error = null;
     return err;
@@ -1462,7 +1462,7 @@ function Mocha(options) {
  */
 
 Mocha.prototype.bail = function(bail){
-  if (0 == arguments.length) bail = true;
+  if (0 === arguments.length) bail = true;
   this.suite.bail(bail);
   return this;
 };
@@ -2457,7 +2457,7 @@ function Dot(runner) {
   });
 
   runner.on('pass', function(test){
-    if (++n % width == 0) process.stdout.write('\n  ');
+    if (++n % width === 0) process.stdout.write('\n  ');
     if ('slow' == test.speed) {
       process.stdout.write(color('bright yellow', Base.symbols.dot));
     } else {
@@ -2778,7 +2778,7 @@ function hideSuitesWithout(classname) {
   var suites = document.getElementsByClassName('suite');
   for (var i = 0; i < suites.length; i++) {
     var els = suites[i].getElementsByClassName(classname);
-    if (0 == els.length) suites[i].className += ' hidden';
+    if (0 === els.length) suites[i].className += ' hidden';
   }
 }
 
@@ -2865,7 +2865,7 @@ exports = module.exports = JSONCov;
 
 function JSONCov(runner, output) {
   var self = this
-    , output = 1 == arguments.length ? true : output;
+    , output = 1 === arguments.length ? true : output;
 
   Base.call(this, runner);
 
@@ -3859,7 +3859,7 @@ function Spec(runner) {
 
   runner.on('suite end', function(suite){
     --indents;
-    if (1 == indents) console.log();
+    if (1 === indents) console.log();
   });
 
   runner.on('pending', function(test){
@@ -4177,7 +4177,7 @@ Runnable.prototype.constructor = Runnable;
  */
 
 Runnable.prototype.timeout = function(ms){
-  if (0 == arguments.length) return this._timeout;
+  if (0 === arguments.length) return this._timeout;
   if ('string' == typeof ms) ms = milliseconds(ms);
   debug('timeout %d', ms);
   this._timeout = ms;
@@ -4494,7 +4494,7 @@ Runner.prototype.globalProps = function() {
  */
 
 Runner.prototype.globals = function(arr){
-  if (0 == arguments.length) return this._globals;
+  if (0 === arguments.length) return this._globals;
   debug('globals %j', arr);
   this._globals = this._globals.concat(arr);
   return this;
@@ -4978,10 +4978,10 @@ function filterLeaks(ok, globals) {
     if (/^mocha-/.test(key)) return false;
 
     var matched = filter(ok, function(ok){
-      if (~ok.indexOf('*')) return 0 == key.indexOf(ok.split('*')[0]);
+      if (~ok.indexOf('*')) return 0 === key.indexOf(ok.split('*')[0]);
       return key == ok;
     });
-    return matched.length == 0 && (!global.navigator || 'onerror' !== key);
+    return matched.length === 0 && (!global.navigator || 'onerror' !== key);
   });
 }
 
@@ -5145,7 +5145,7 @@ Suite.prototype.slow = function(ms){
  */
 
 Suite.prototype.bail = function(bail){
-  if (0 == arguments.length) return this._bail;
+  if (0 === arguments.length) return this._bail;
   debug('bail %s', bail);
   this._bail = bail;
   return this;

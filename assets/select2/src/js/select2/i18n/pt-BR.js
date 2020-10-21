@@ -9,7 +9,7 @@ define(function () {
 
       var message = 'Apague ' + overChars + ' caracter';
 
-      if (overChars != 1) {
+      if (overChars !== 1) {
         message += 'es';
       }
 
@@ -28,7 +28,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Você só pode selecionar ' + args.maximum + ' ite';
 
-      if (args.maximum == 1) {
+      if (args.maximum === 1) {
         message += 'm';
       } else {
         message += 'ns';

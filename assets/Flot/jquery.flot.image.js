@@ -98,7 +98,7 @@ Google Maps).
     
     $.plot.image.load = function (urls, callback) {
         var missing = urls.length, loaded = {};
-        if (missing == 0)
+        if (missing === 0)
             callback({});
 
         $.each(urls, function (i, url) {

@@ -118,8 +118,8 @@
     }
     type = type + 'CurveTo';
 
-    if (line.length == 0) line.push([points[0], points[1], cpoints.concat(points.slice(2)), type]);
-    else if (type == "quadraticCurveTo" && points.length == 2) {
+    if (line.length === 0) line.push([points[0], points[1], cpoints.concat(points.slice(2)), type]);
+    else if (type === "quadraticCurveTo" && points.length === 2) {
       cpoints = cpoints.slice(0, 2).concat(points);
 
       line.push([points[0], points[1], cpoints, type]);

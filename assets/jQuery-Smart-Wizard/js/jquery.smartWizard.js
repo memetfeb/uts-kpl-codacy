@@ -89,7 +89,7 @@ function SmartWizard(target, options) {
             }
             var nextStepIdx = $this.steps.index(this);
             var isDone = $this.steps.eq(nextStepIdx).attr("isDone") - 0;
-            if(isDone == 1){
+            if(isDone === 1){
                 _loadContent($this, nextStepIdx);
             }
             return false;
@@ -98,9 +98,9 @@ function SmartWizard(target, options) {
         // Enable keyboard navigation
         if($this.options.keyNavigation){
             $(document).keyup(function(e){
-                if(e.which==39){ // Right Arrow
+                if(e.which===39){ // Right Arrow
                     $this.goForward();
-                }else if(e.which==37){ // Left Arrow
+                }else if(e.which===37){ // Left Arrow
                     $this.goBackward();
                 }
             });

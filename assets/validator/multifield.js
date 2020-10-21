@@ -16,11 +16,11 @@
 		var nextPrevField,
 			sel = [this.selectionStart, this.selectionEnd];
 
-		if( !e.charCode && e.keyCode != 37 && e.keyCode != 39 && e.keyCode != 8 )			
+		if( !e.charCode && e.keyCode !== 37 && e.keyCode !== 39 && e.keyCode !== 8 )			
 			return;	
 
 		// if hit Backspace key when caret was at the beginning, or if the 'left' arrow key was pressed and the caret was at the start -> go back to previous field	
-		if( (e.keyCode == 8 && sel[1] == 0) || (e.keyCode == 37 && sel[1] == 0) )			
+		if( (e.keyCode === 8 && sel[1] === 0) || (e.keyCode === 37 && sel[1] === 0) )			
 			setCaret( $(this).prev(':text')[0], 100);
 		
 		// if the 'right' arrow key was pressed and caret was at the end -> advance to the next field

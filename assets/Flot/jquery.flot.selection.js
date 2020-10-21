@@ -104,7 +104,7 @@ The plugin allso adds the following methods to the plot object:
         }
 
         function onMouseDown(e) {
-            if (e.which != 1)  // only accept left-click
+            if (e.which !== 1)  // only accept left-click
                 return;
             
             // cancel out any text selections
@@ -229,7 +229,7 @@ The plugin allso adds the following methods to the plot object:
                 axis = axes[k];
                 if (axis.direction == coord) {
                     key = coord + axis.n + "axis";
-                    if (!ranges[key] && axis.n == 1)
+                    if (!ranges[key] && axis.n === 1)
                         key = coord + "axis"; // support x1axis as xaxis
                     if (ranges[key]) {
                         from = ranges[key].from;

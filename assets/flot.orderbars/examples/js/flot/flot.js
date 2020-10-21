@@ -177,7 +177,7 @@
             var res = {}, i;
             $.each(xaxes.concat(yaxes), function (_, axis) {
                 if (axis)
-                    res[axis.direction + (axis.n != 1 ? axis.n : "") + "axis"] = axis;
+                    res[axis.direction + (axis.n !== 1 ? axis.n : "") + "axis"] = axis;
             });
             return res;
         };
@@ -369,7 +369,7 @@
                 axis = xaxes[i];
                 if (axis && axis.used) {
                     key = "x" + axis.n;
-                    if (pos[key] == null && axis.n == 1)
+                    if (pos[key] === null && axis.n === 1)
                         key = "x";
 
                     if (pos[key] != null) {
@@ -442,7 +442,7 @@
                     c = $.color.parse(options.colors[i]);
 
                 // vary color if needed
-                var sign = variation % 2 == 1 ? -1 : 1;
+                var sign = variation % 2 === 1 ? -1 : 1;
                 c.scale('rgb', 1 + sign * Math.ceil(variation / 2) * 0.2)
 
                 // FIXME: if we're getting to close to something else,
@@ -741,7 +741,7 @@
                 existingCanvas = placeholder.children("canvas.base"),
                 existingOverlay = placeholder.children("canvas.overlay");
 
-            if (existingCanvas.length == 0 || existingOverlay == 0) {
+            if (existingCanvas.length === 0 || existingOverlay === 0) {
                 // init everything
 
                 placeholder.html(""); // make sure placeholder is clear
@@ -944,7 +944,7 @@
                 return a && a.reserveSpace;
             });
 
-            var innermost = $.inArray(axis, sameDirection) == 0;
+            var innermost = $.inArray(axis, sameDirection) === 0;
             if (!innermost && tickLength == "full")
                 tickLength = 5;
 
@@ -1070,11 +1070,11 @@
                 max = +(opts.max != null ? opts.max : axis.datamax),
                 delta = max - min;
 
-            if (delta == 0.0) {
+            if (delta === 0.0) {
                 // degenerate case
-                var widen = max == 0 ? 1 : 0.01;
+                var widen = max === 0 ? 1 : 0.01;
 
-                if (opts.min == null)
+                if (opts.min === null)
                     min -= widen;
                 // always widen max if we couldn't widen min to ensure we
                 // don't fall into min == max which doesn't work
@@ -1447,7 +1447,7 @@
                 axis = axes[i];
                 if (axis.direction == coord) {
                     key = coord + axis.n + "axis";
-                    if (!ranges[key] && axis.n == 1)
+                    if (!ranges[key] && axis.n === 1)
                         key = coord + "axis"; // support x1axis as xaxis
                     if (ranges[key]) {
                         from = ranges[key].from;
@@ -1563,7 +1563,7 @@
             for (var j = 0; j < axes.length; ++j) {
                 var axis = axes[j], box = axis.box,
                     t = axis.tickLength, x, y, xoff, yoff;
-                if (!axis.show || axis.ticks.length == 0)
+                if (!axis.show || axis.ticks.length === 0)
                     continue
 
                 ctx.strokeStyle = axis.options.tickColor || $.color.parse(axis.options.color).scale('a', 0.22).toString();
@@ -1594,7 +1594,7 @@
                     else
                         yoff = plotHeight;
 
-                    if (ctx.lineWidth == 1) {
+                    if (ctx.lineWidth === 1) {
                         x = Math.floor(x) + 0.5;
                         y = Math.floor(y) + 0.5;
                     }
@@ -2212,7 +2212,7 @@
                 if (!label)
                     continue;
 
-                if (i % options.legend.noColumns == 0) {
+                if (i % options.legend.noColumns === 0) {
                     if (rowStarted)
                         fragments.push('</tr>');
                     fragments.push('<tr>');
@@ -2233,7 +2233,7 @@
                 fragments.reverse();
             }
 
-            if (fragments.length == 0)
+            if (fragments.length === 0)
                 return;
 
             var table = '<table style="font-size:smaller;color:' + options.grid.color + '">' + fragments.join("") + '</table>';
@@ -2254,7 +2254,7 @@
                 else if (p.charAt(1) == "w")
                     pos += 'left:' + (m[0] + plotOffset.left) + 'px;';
                 var legend = $('<div class="legend">' + table.replace('style="', 'style="position:absolute;' + pos +';') + '</div>').appendTo(placeholder);
-                if (options.legend.backgroundOpacity != 0.0) {
+                if (options.legend.backgroundOpacity !== 0.0) {
                     // put in the transparent background
                     // separately to avoid blended labels and
                     // label boxes
@@ -2371,7 +2371,7 @@
         function onMouseMove(e) {
             if (options.grid.hoverable)
                 triggerClickHoverEvent("plothover", e,
-                    function (s) { return s["hoverable"] != false; });
+                    function (s) { return s["hoverable"] !== false; });
         }
 
         function onMouseLeave(e) {
@@ -2382,7 +2382,7 @@
 
         function onClick(e) {
             triggerClickHoverEvent("plotclick", e,
-                function (s) { return s["clickable"] != false; });
+                function (s) { return s["clickable"] !== false; });
         }
 
         // trigger click or hover event (they send the same parameters
@@ -2575,20 +2575,20 @@
     $.plot.formatDate = function(d, fmt, monthNames) {
         var leftPad = function(n) {
             n = "" + n;
-            return n.length == 1 ? "0" + n : n;
+            return n.length === 1 ? "0" + n : n;
         };
 
         var r = [];
         var escape = false, padNext = false;
         var hours = d.getUTCHours();
         var isAM = hours < 12;
-        if (monthNames == null)
+        if (monthNames === null)
             monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
         if (fmt.search(/%p|%P/) != -1) {
             if (hours > 12) {
                 hours = hours - 12;
-            } else if (hours == 0) {
+            } else if (hours === 0) {
                 hours = 12;
             }
         }

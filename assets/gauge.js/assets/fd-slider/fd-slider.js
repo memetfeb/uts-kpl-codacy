@@ -731,7 +731,7 @@ var fdSlider = (function() {
                          
                         if(e.touches) {
                                 // Skip gestures
-                                if(e.targetTouches && e.targetTouches.length != 1) {                                        
+                                if(e.targetTouches && e.targetTouches.length !== 1) {                                        
                                         return false;
                                 };                                
                                 e = e.touches[0];

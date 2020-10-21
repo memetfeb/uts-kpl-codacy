@@ -146,7 +146,7 @@
         function calculCenterBarShift(){
             var width = 0;
 
-            if(nbOfBarsToOrder%2 != 0)
+            if(nbOfBarsToOrder%2 !== 0)
                 width = (orderedBarSeries[Math.ceil(nbOfBarsToOrder / 2)].bars.barWidth)/2;
 
             return width;

@@ -33,10 +33,10 @@ $(document).ready(function() {
       if ($('#showDropdowns').is(':checked'))
         options.showDropdowns = true;
 
-      if ($('#minYear').val().length && $('#minYear').val() != 1)
+      if ($('#minYear').val().length && $('#minYear').val() !== 1)
         options.minYear = parseInt($('#minYear').val(), 10);
 
-      if ($('#maxYear').val().length && $('#maxYear').val() != 1)
+      if ($('#maxYear').val().length && $('#maxYear').val() !== 1)
         options.maxYear = parseInt($('#maxYear').val(), 10);
 
       if ($('#showWeekNumbers').is(':checked'))
@@ -51,7 +51,7 @@ $(document).ready(function() {
       if ($('#timePicker24Hour').is(':checked'))
         options.timePicker24Hour = true;
 
-      if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
+      if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() !== 1)
         options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
 
       if ($('#timePickerSeconds').is(':checked'))

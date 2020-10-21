@@ -6,7 +6,7 @@ define(function () {
 
       var message = 'Sisesta ' + overChars + ' täht';
 
-      if (overChars != 1) {
+      if (overChars !== 1) {
         message += 'e';
       }
 
@@ -19,7 +19,7 @@ define(function () {
 
       var message = 'Sisesta ' + remainingChars + ' täht';
 
-      if (remainingChars != 1) {
+      if (remainingChars !== 1) {
         message += 'e';
       }
 
@@ -33,7 +33,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Saad vaid ' + args.maximum + ' tulemus';
 
-      if (args.maximum == 1) {
+      if (args.maximum === 1) {
         message += 'e';
       } else {
         message += 't';

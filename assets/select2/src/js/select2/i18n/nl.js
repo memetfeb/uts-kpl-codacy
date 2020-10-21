@@ -23,10 +23,10 @@ define(function () {
       return 'Meer resultaten laden…';
     },
     maximumSelected: function (args) {
-      var verb = args.maximum == 1 ? 'kan' : 'kunnen';
+      var verb = args.maximum === 1 ? 'kan' : 'kunnen';
       var message = 'Er ' + verb + ' maar ' + args.maximum + ' item';
 
-      if (args.maximum != 1) {
+      if (args.maximum !== 1) {
         message += 's';
       }
       message += ' worden geselecteerd';

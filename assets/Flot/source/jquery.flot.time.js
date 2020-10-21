@@ -82,7 +82,7 @@ API.txt for details.
         var leftPad = function(n, pad) {
 			n = "" + n;
 			pad = "" + (pad == null ? "0" : pad);
-			return n.length == 1 ? pad + n : n;
+			return n.length === 1 ? pad + n : n;
 		};
 
 		var formatMicroseconds = function(n, dec) {
@@ -113,7 +113,7 @@ API.txt for details.
         var hours12;
 		if (hours > 12) {
 			hours12 = hours - 12;
-		} else if (hours == 0) {
+		} else if (hours === 0) {
 			hours12 = 12;
 		} else {
 			hours12 = hours;

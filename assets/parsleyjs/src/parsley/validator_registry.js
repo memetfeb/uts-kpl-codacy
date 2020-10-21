@@ -248,7 +248,7 @@ ParsleyValidatorRegistry.prototype = {
               return false;
             // Be careful of rounding errors by using integers.
             var toInt = f => { return Math.round(f * Math.pow(10, decimals)); };
-            if ((toInt(nb) - toInt(base)) % toInt(step) != 0)
+            if ((toInt(nb) - toInt(base)) % toInt(step) !== 0)
               return false;
           }
         }

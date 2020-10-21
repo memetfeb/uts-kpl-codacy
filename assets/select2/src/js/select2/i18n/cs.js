@@ -29,7 +29,7 @@ define(function () {
     inputTooShort: function (args) {
       var n = args.minimum - args.input.length;
 
-      if (n == 1) {
+      if (n === 1) {
         return 'Prosím zadejte ještě jeden znak';
       } else if (n <= 4) {
         return 'Prosím zadejte ještě další ' + small(n, true) + ' znaky';

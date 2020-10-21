@@ -9,7 +9,7 @@ define(function () {
 
       var message = 'Por favor apague ' + overChars + ' ';
 
-      message += overChars != 1 ? 'caracteres' : 'carácter';
+      message += overChars !== 1 ? 'caracteres' : 'carácter';
 
       return message;
     },
@@ -26,7 +26,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Apenas pode seleccionar ' + args.maximum + ' ';
 
-      message += args.maximum != 1 ? 'itens' : 'item';
+      message += args.maximum !== 1 ? 'itens' : 'item';
 
       return message;
     },

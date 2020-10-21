@@ -24,7 +24,7 @@ define(function () {
     maximumSelected: function (args) {
       var message = 'Du kan kun vælge ' + args.maximum + ' emne';
 
-      if (args.maximum != 1) {
+      if (args.maximum !== 1) {
         message += 'r';
       }
 
