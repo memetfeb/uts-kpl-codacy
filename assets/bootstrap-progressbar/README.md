@@ -2,7 +2,6 @@
 
 `bootstrap-progressbar` is a [jQuery](http://jquery.com) plugin which extends the basic [twitter-bootstrap](https://github.com/twbs/bootstrap) progressbar. It provides the ability to animate the progressbar by adding Javascript in combination with the preexisting css transitions. Additionally you can display the current progress information in the bar or get the value via callback.
 
-
 ## What's new in v0.9.0?
 
         * Fix #49 runtime option override support
@@ -14,18 +13,15 @@
 
         * __Note__: Stacked progressbars are not supported by now.
 
-
 ## Demo
 
         * http://www.minddust.com/project/bootstrap-progressbar/demo/
-
 
 ## Installation
 
         * Download the latest release: [v0.9.0](https://github.com/minddust/bootstrap-progressbar/archive/v0.9.0.zip)
         * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
         * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
-
 
 ## Usage
 
@@ -36,7 +32,6 @@
     ```
 
     2. activate `bootstrap-progressbar` functionality on progressbars of your choice:
-
 
     ```javascript
     $('.progress .bar').progressbar();           // bootstrap 2
@@ -60,7 +55,6 @@
             <div class="progress-bar" data-transitiongoal="75" aria-valuemin="-1337" aria-valuemax="9000"></div>
         </div>
         ```
-
 
 ## Usage Extended
 
@@ -92,7 +86,6 @@
         * Multiple trigger
 
     You can trigger progressbar as much as you want. Just change your attribute(s) and trigger `.progressbar()` again. All settings made before will be kept.
-
 
 ## Settings
 
@@ -183,7 +176,6 @@ It takes 1 argument which is a reference to the attached progressbar element.
 Is a callback function which will be called when an error occurs.
 
 It takes 1 argument which is the error message.
-
 
 ## Customisation
 

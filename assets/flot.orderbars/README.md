@@ -28,9 +28,5 @@ To use the 2 together:
       }
   });
 ```
-
         * Ensure that the order bars plugin is loaded __before__ the stack plugin.
-
 See the example for more information.
-
-

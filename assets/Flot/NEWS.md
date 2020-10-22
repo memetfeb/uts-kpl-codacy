@@ -176,7 +176,6 @@
     - Fixed missing semicolons in the core library.
       (reported by Michal Zglinski)
 
-
 ## Flot 0.8.0 ##
 
 ### API changes ###

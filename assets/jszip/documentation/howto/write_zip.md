@@ -27,7 +27,6 @@ Under the hood, the polyfill uses the native `saveAs` from the
 (on Chrome and IE10+) or use a [Blob URL](http://updates.html5rocks.com/2011/08/Downloading-resources-in-HTML5-a-download)
 (on Firefox).
 
-
 #### Data URI
 
 For older browsers that support [data URI](http://caniuse.com/datauri), you can also
@@ -82,8 +81,6 @@ brilliant tutorial on [using JSZip with Google Gears](http://www.picurl.org/blog
 If you want to let your Gears users download several files at once I really
 recommend having a look at some of his [examples](http://picurl.org/gears/zipper/).
 
-
-
 ### In nodejs
 
 JSZip can generate Buffers so you can do the following :
@@ -102,5 +99,3 @@ fs.writeFile("test.zip", buffer, function(err) {
   if (err) throw err;
 });
 ```
-
-

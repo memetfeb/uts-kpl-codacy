@@ -98,7 +98,6 @@ If your are new in web development and you are not sure how to correctly install
         * Callbacks data object format was changed. Example: fromNumber &rarr; <b>from</b>
         * Slider now writes it's result to value attribute and also to data-from and data-to attributes
 
-
 ## <a href="http://jsfiddle.net/IonDen/qv6yrjrv/" target="_blank">Experiments playground</a>
 
 ## Settings

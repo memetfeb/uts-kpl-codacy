@@ -3,24 +3,16 @@
 -->
 #### 问题简述 (One-line summary)
 
-
-
 #### 版本及环境 (Version & Environment)
         + ECharts 版本 (ECharts version):
         + 浏览器类型和版本 (Browser version):
         + 操作系统类型和版本 (OS Version):
 
-
 #### 重现步骤 (Steps to reproduce)
-
 
 #### 期望结果 (Expected behaviour)
 
-
-
 #### 可能哪里有问题 (What went wrong)
-
-
 
 #### ECharts配置项 (ECharts option)
 <!-- 下方贴你的option，注意不要删掉下方 ```javascript 和 尾部的 ``` 字样。
@@ -33,7 +25,5 @@ option = {
 
 ```
 
-
 #### 其他信息 (Other comments)
 <!-- 例如，截图或线上实例 (JSFiddle/JSBin/Codepen) (For example: Screenshot or Online demo) -->
-

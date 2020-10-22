@@ -32,7 +32,6 @@ can write it as
 There's a complete example below, but you should also check out the
 plugins bundled with Flot.
 
-
 ## Complete example ##
   
 Here is a simple debug plugin which alerts each of the series in the
@@ -93,7 +92,6 @@ This simple plugin illustrates a couple of points:
 The two last points are important because there may be multiple plots
 on the same page, and you'd want to make sure they are not mixed up.
 
-
 ## Shutting down a plugin ##
 
 Each plot object has a shutdown hook which is run when plot.shutdown()
@@ -111,7 +109,6 @@ but because your event handler is still referencing it, it can't be
 garbage collected yet, and worse, if your handler eventually runs, it
 may overwrite stuff on a completely different plot.
 
- 
 ## Some hints on the options ##
    
 Plugins should always support appropriate options to enable/disable

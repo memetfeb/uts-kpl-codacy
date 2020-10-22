@@ -166,7 +166,6 @@ See [the Releases section of our GitHub project](https://github.com/twbs/bootstr
     - <https://twitter.com/fat>
     - <https://github.com/fat>
 
-
 ## Thanks
 
 <a href="https://www.browserstack.com/">
@@ -175,13 +174,11 @@ See [the Releases section of our GitHub project](https://github.com/twbs/bootstr
 
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
-
 ## Backers
 
 Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
 
 [![Bakers](https://opencollective.com/bootstrap/backers.svg?width=890)](https://opencollective.com/bootstrap#backers)
-
 
 ## Sponsors
 
@@ -197,7 +194,6 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 [![](https://opencollective.com/bootstrap/sponsor/7/avatar.svg)](https://opencollective.com/bootstrap/sponsor/7/website)
 [![](https://opencollective.com/bootstrap/sponsor/8/avatar.svg)](https://opencollective.com/bootstrap/sponsor/8/website)
 [![](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
-
 
 ## Copyright and license
 

@@ -24,4 +24,3 @@
   ```
   
   然后打开浏览器的调试工具（如 `Chrome Deverloper Tool`）的 `控制台(console)`，可以得到option输出。
-

@@ -10,7 +10,6 @@ the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue or assessing
 patches and features.
 
-
 ## Using the issue tracker
 
 The [issue tracker](https://github.com/twbs/bootstrap/issues) is
@@ -31,7 +30,6 @@ restrictions:
       * Please **do not** open issues regarding the official themes offered on <https://themes.getbootstrap.com/>.
   Instead, please email any questions or feedback regarding those themes to `themes AT getbootstrap DOT com`.
 
-
 ## Issues and labels
 
 Our bug tracker utilizes several labels to help organize and identify issues. Here's what they represent and how we use them:
@@ -48,7 +46,6 @@ Our bug tracker utilizes several labels to help organize and identify issues. He
       - `meta` - Issues with the project itself or our GitHub repository.
 
 For a complete look at our labels, see the [project labels page](https://github.com/twbs/bootstrap/labels).
-
 
 ## Bug reports
 
@@ -108,11 +105,9 @@ When feasible, we aim to report such upstream bugs to the relevant browser vendo
 | Apple         | Safari                       | WebKit           | https://bugs.webkit.org/enter_bug.cgi?product=WebKit <br> https://bugreport.apple.com/ | In Apple's bug reporter, choose "Safari" as the product. |
 | Google, Opera | Chrome, Chromium, Opera v15+ | Blink            | https://bugs.chromium.org/p/chromium/issues/list                                      | Click the "New issue" button.                            |
 | Microsoft     | Edge                         | EdgeHTML         | https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/                 |                                                          |
-
 ### Issues bots
 
 [@twbs-lmvtfy](https://github.com/twbs-lmvtfy) is a Bootstrap bot that hangs out in our GitHub issue tracker and automatically checks for HTML validation errors in live examples (e.g. jsFiddles, JS Bins, Bootplys, Plunks, CodePens, etc.) posted in issue comments. If it finds any errors, it will post a follow-up comment on the issue and point out the errors. If this happens with an example you've posted, please fix the errors and post an updated live example. If you opened a bug report, please check whether the bug still occurs with your revised, valid live example. If the bug no longer occurs, it was probably due to your invalid HTML rather than something in Bootstrap and we'd appreciate it if you could close out the GitHub issue.
-
 
 ## Feature requests
 
@@ -120,7 +115,6 @@ Feature requests are welcome. But take a moment to find out whether your idea
 fits with the scope and aims of the project. It's up to yo to make a strong
 case to convince the project's developers of the merits of this feature. Please
 provide as much detail and context as possible.
-
 
 ## Pull requests
 
@@ -204,7 +198,6 @@ includes code changes) and under the terms of the
 [Creative Commons Attribution 3.0 Unported License](docs/LICENSE)
 (if it includes documentation changes).
 
-
 ## Code guidelines
 
 ### HTML
@@ -233,7 +226,6 @@ includes code changes) and under the terms of the
 ### Checking coding style
 
 Run `npm run test` before committing to ensure your changes follow our coding standards.
-
 
 ## License
 

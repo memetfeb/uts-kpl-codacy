@@ -4,7 +4,6 @@ NProgress
 Slim progress bars for Ajax'y applications. Inspired by Google, YouTube, and
 Medium.
 
-
 Installation
 ------------
 
@@ -46,7 +45,6 @@ $(document).on('page:restore', function() { NProgress.remove(); });
 
 Ideas
 -----
-
         * Add progress to your Ajax calls! Bind it to the jQuery `ajaxStart` and
         `ajaxStop` events.
 

@@ -40,18 +40,15 @@
         * Для продвинутых пользователей есть поддержка колбэков (onStart, onChange, onFinish, onUpdate). Слайдер передает свои значения в эти функции первым аргументом в виде объекта
         * Слайдер поддерживает работу с датой и временем
 
-
 ## Демо
 
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" class="switch__item">Базовые настройки</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_advanced.html" class="switch__item">Расширенные настройки</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html" class="switch__item">Взаимодействия</a>
 
-
 ## Зависимости
 
         * <a href="http://jquery.com/" target="_blank">jQuery 1.8.x+</a>
-
 
 ## Использование
 
@@ -72,16 +69,13 @@
                             
 Либо воспользуйтесь вложенным в архив PSD файлом, и нарисуйте собственный скин (не забудьте модифицировать размеры элементов в CSS файле)
 
-
 ## Устанавливаем с помощью bower
 
         * bower install ionrangeslider
 
-
 ## Устанавливаем с помощью npm
 
         * npm install ion-rangeslider
-
 
 ## Инициализация
 
@@ -106,9 +100,7 @@ $("#example_id").ionRangeSlider();
         * Изменился формат объекта с данными слайдера, возвращаемый в колбэки. Например: fromNumber &rarr; <b>from</b>
         * Слайдер теперь постоянно записывает свои значения в поле value и в атрибуты data-from и data-to
 
-
 ## <a href="http://jsfiddle.net/IonDen/qv6yrjrv/" target="_blank">Площадка для эксперементов с плагином</a>
-
 
 ## Настройка
 
@@ -385,7 +377,6 @@ $("#example_id").ionRangeSlider();
     </tbody>
 </table>
 
-
 ## Описание данных передаваемых в колбэки (onChange и т.д):
 
 Результат имеет тип object и передается коллбэк первым аргументом:
@@ -467,7 +458,6 @@ slider.reset();
 // DESTROY - убивает слайдер и восстанавливает исходный input
 slider.destroy();
 ```
-
 ## Еще раз взглянем на демо
 
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" class="switch__item">Базовые настройки</a>
@@ -475,7 +465,6 @@ slider.destroy();
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html" class="switch__item">Взаимодействия</a>
 
 В демках есть примеры использования всех опций слайдера
-
 
 ### <a href="history.md">История обновлений</a>
 

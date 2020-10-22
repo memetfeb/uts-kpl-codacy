@@ -98,8 +98,6 @@ zip.file(pathname, content, {
     unixPermissions: stat.mode
 });
 
-// ...
-
 zip.generate({
     type: 'nodebuffer',
     platform: process.platform
@@ -141,9 +139,7 @@ var link = document.getElementById("link"); //I suppose you'll have a link with 
 link.download = "testjs.ods";
 link.href = url;
 
-
 ```
-
 
 Using a custom charset :
 
@@ -158,4 +154,3 @@ zip.generate({
     }
 });
 ```
-

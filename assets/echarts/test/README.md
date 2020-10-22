@@ -1,12 +1,8 @@
 # Test Guide
 
-
-
 ## Functional Test
 
 Open `./*.html` files in Web Browsers.
-
-
 
 ## Unit Test
 
@@ -47,8 +43,6 @@ If one argument is passed, we take it as the hash code of a release and compare 
 #### Compare arbitrary two commits
 
 Since `/dist/echarts.js` is only the build result of release versions, to compare arbitrary versions, you need to checkout specific commits and build the source files. Put the build results as `./tmp/oldEcharts.js` and `./tmp/newEcharts.js` will work.
-
-
 
 ### Rendering-irrelevant
 

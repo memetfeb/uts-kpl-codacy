@@ -7,8 +7,6 @@
 [![Dependencies Status](https://david-dm.org/rendro/easy-pie-chart/dev-status.png)](https://david-dm.org/rendro/easy-pie-chart)
 [![Analytics](https://ga-beacon.appspot.com/UA-46840672-1/easy-pie-chart/readme)](https://github.com/igrigorik/ga-beacon)
 
-
-
 ## Features
 [![](https://github.com/rendro/easy-pie-chart/raw/master/demo/img/easy-pie-chart.png)](http://drbl.in/ezuc)
 
@@ -23,8 +21,6 @@
         * Vanilla JS *(no dependencies)* (~872 bytes)
         * jQuery plugin (~921 bytes)
         * Angular Module (~983 bytes)
-
-
 
 ## Get started
 #### Installation
@@ -96,8 +92,6 @@ If you don't want to use jQuery, implement the Vanilla JS version without any de
 </script>
 ```
 
-
-
 ## Options
 You can pass these options to the initialize function to set a custom look and feel for the plugin.
 
@@ -159,8 +153,6 @@ You can pass these options to the initialize function to set a custom look and f
     </tr>
 </table>
 
-
-
 ## Callbacks
 All callbacks will only be called if `animate` is not `false`.
 
@@ -182,8 +174,6 @@ All callbacks will only be called if `animate` is not `false`.
         <td>Is called at the end of any animation.</td>
     </tr>
 </table>
-
-
 
 ## Plugin api
 #### jQuery
@@ -239,8 +229,6 @@ For a value binding you need to add the `percent` attribute and bind it to your 
 
 When using [RequireJS](http://requirejs.org) you can define your own name. Examples can be found in the `demo/requirejs.html`.
 
-
-
 ## Browser Support
 Native support
 
@@ -252,17 +240,11 @@ Native support
 
 Support for Internet Explorer 7 and 8 with [excanvas](https://code.google.com/p/explorercanvas/wiki/Instructions) polyfill.
 
-
-
 ## Test
 To run the test just use the karma adapter of grunt: `grunt test`
 
-
-
 ## Credits
 Thanks to [Rafal Bromirski](http://www.paranoida.com/) for designing [this dribble shot](http://drbl.in/ezuc) which inspired me building this plugin.
-
-
 
 ## Copyright
 Copyright (c) 2014 Robert Fleischmann, contributors. Released under the MIT, GPL licenses
