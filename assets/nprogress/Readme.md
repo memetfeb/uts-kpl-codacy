@@ -47,11 +47,11 @@ $(document).on('page:restore', function() { NProgress.remove(); });
 Ideas
 -----
 
- * Add progress to your Ajax calls! Bind it to the jQuery `ajaxStart` and
- `ajaxStop` events.
+        * Add progress to your Ajax calls! Bind it to the jQuery `ajaxStart` and
+        `ajaxStop` events.
 
- * Make a fancy loading bar even without Turbolinks/Pjax! Bind it to
- `$(document).ready` and `$(window).load`.
+        * Make a fancy loading bar even without Turbolinks/Pjax! Bind it to
+        `$(document).ready` and `$(window).load`.
 
 Advanced usage
 --------------
@@ -159,7 +159,7 @@ make your own!
 Resources
 ---------
 
- * [New UI Pattern: Website Loading Bars](http://www.usabilitypost.com/2013/08/19/new-ui-pattern-website-loading-bars/) (usabilitypost.com)
+        * [New UI Pattern: Website Loading Bars](http://www.usabilitypost.com/2013/08/19/new-ui-pattern-website-loading-bars/) (usabilitypost.com)
 
 Support
 -------

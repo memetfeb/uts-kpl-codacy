@@ -10,7 +10,7 @@ Improvements
 The main improvement I've made is compatability with the [Flot Stack plugin](https://github.com/flot/flot/blob/master/jquery.flot.stack.js).
 
 To use the 2 together:
-* Ensure that your data is well formed. Each series should contain a bars object with an order integer, like so:
+        * Ensure that your data is well formed. Each series should contain a bars object with an order integer, like so:
 ```javascript
   var series = [];
   
@@ -29,7 +29,7 @@ To use the 2 together:
   });
 ```
 
-* Ensure that the order bars plugin is loaded __before__ the stack plugin.
+        * Ensure that the order bars plugin is loaded __before__ the stack plugin.
 
 See the example for more information.
 
