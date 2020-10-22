@@ -1,17 +1,18 @@
-* {	
-		padding: 0; 
-		margin: 0; 
-		vertical-align: top; 
-	}
+* {
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
 
-body {
+	body {
 		background: url("background.png") repeat-x;
 		font: 18px/1.5em "proxima-nova", "Helvetica", "Arial", sans-serif;
 	}
 
-a {	
-		color: #069; 
-	}
+a {
+	color: #069;
+}
+
 a:hover {	color: #28b; }
 
 h2 {
