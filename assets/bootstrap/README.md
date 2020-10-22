@@ -24,29 +24,29 @@
 
 ## Table of contents
 
-- [Quick start](#quick-start)
-- [Status](#status)
-- [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Thanks](#thanks)
-- [Copyright and license](#copyright-and-license)
+    - [Quick start](#quick-start)
+    - [Status](#status)
+    - [What's included](#whats-included)
+    - [Bugs and feature requests](#bugs-and-feature-requests)
+    - [Documentation](#documentation)
+    - [Contributing](#contributing)
+    - [Community](#community)
+    - [Versioning](#versioning)
+    - [Creators](#creators)
+    - [Thanks](#thanks)
+    - [Copyright and license](#copyright-and-license)
 
 
 ## Quick start
 
 Several quick start options are available:
 
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.3.1.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com/): `npm install bootstrap`
-- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.3.1`
-- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.3.1`
-- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+    - [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.3.1.zip)
+    - Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+    - Install with [npm](https://www.npmjs.com/): `npm install bootstrap`
+    - Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@4.3.1`
+    - Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:4.3.1`
+    - Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
 
 Read the [Getting started page](https://getbootstrap.com/docs/4.3/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
@@ -117,21 +117,21 @@ Documentation search is powered by [Algolia's DocSearch](https://community.algol
 
 ### Running documentation locally
 
-1. Run through the [tooling setup](https://getbootstrap.com/docs/4.3/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm install` to install Node.js dependencies.
-3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
-4. Open `http://localhost:9001` in your browser, and voilà.
+    1. Run through the [tooling setup](https://getbootstrap.com/docs/4.3/getting-started/build-tools/#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
+    2. Run `npm install` to install Node.js dependencies.
+    3. Run `npm start` to compile CSS and JavaScript files, generate our docs, and watch for changes.
+    4. Open `http://localhost:9001` in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/).
 
 ### Documentation for previous releases
 
-- For v2.3.2: <https://getbootstrap.com/2.3.2/>
-- For v3.3.x: <https://getbootstrap.com/docs/3.3/>
-- For v3.4.0: <https://getbootstrap.com/docs/3.4/>
-- For v4.0.x: <https://getbootstrap.com/docs/4.0/>
-- For v4.1.x: <https://getbootstrap.com/docs/4.1/>
-- For v4.2.x: <https://getbootstrap.com/docs/4.2/>
+    - For v2.3.2: <https://getbootstrap.com/2.3.2/>
+    - For v3.3.x: <https://getbootstrap.com/docs/3.3/>
+    - For v3.4.0: <https://getbootstrap.com/docs/3.4/>
+    - For v4.0.x: <https://getbootstrap.com/docs/4.0/>
+    - For v4.1.x: <https://getbootstrap.com/docs/4.1/>
+    - For v4.2.x: <https://getbootstrap.com/docs/4.2/>
 
 [Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
@@ -149,12 +149,12 @@ Editor preferences are available in the [editor config](https://github.com/twbs/
 
 Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
-- Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
+    - Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+    - Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+    - Join [the official Slack room](https://bootstrap-slack.herokuapp.com/).
+    - Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
+    - Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
+    - Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
 
 
 ## Versioning
@@ -168,13 +168,13 @@ See [the Releases section of our GitHub project](https://github.com/twbs/bootstr
 
 **Mark Otto**
 
-- <https://twitter.com/mdo>
-- <https://github.com/mdo>
+    - <https://twitter.com/mdo>
+    - <https://github.com/mdo>
 
 **Jacob Thornton**
 
-- <https://twitter.com/fat>
-- <https://github.com/fat>
+    - <https://twitter.com/fat>
+    - <https://github.com/fat>
 
 
 ## Thanks

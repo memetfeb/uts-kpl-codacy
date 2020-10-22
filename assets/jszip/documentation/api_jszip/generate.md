@@ -22,12 +22,12 @@ options.encodeFileName | function  | encode with UTF-8 | the function to encode 
 
 Possible values for `type` :
 
-* `base64` (default) : the result will be a string, the binary in a base64 form.
-* `string` : the result will be a string in "binary" form, using 1 byte per char (2 bytes).
-* `uint8array` : the result will be a Uint8Array containing the zip. This requires a compatible browser.
-* `arraybuffer` : the result will be a ArrayBuffer containing the zip. This requires a compatible browser.
-* `blob` : the result will be a Blob containing the zip. This requires a compatible browser.
-* `nodebuffer` : the result will be a nodejs Buffer containing the zip. This requires nodejs.
+        * `base64` (default) : the result will be a string, the binary in a base64 form.
+        * `string` : the result will be a string in "binary" form, using 1 byte per char (2 bytes).
+        * `uint8array` : the result will be a Uint8Array containing the zip. This requires a compatible browser.
+        * `arraybuffer` : the result will be a ArrayBuffer containing the zip. This requires a compatible browser.
+        * `blob` : the result will be a Blob containing the zip. This requires a compatible browser.
+        * `nodebuffer` : the result will be a nodejs Buffer containing the zip. This requires nodejs.
 
 Note : when using type = "uint8array", "arraybuffer" or "blob", be sure to
 check if the browser supports it (you can use [`JSZip.support`]({{site.baseurl}}/documentation/api_jszip/support.html)).

@@ -8,14 +8,14 @@ ECharts is a free, powerful charting and visualization library offering an easy 
 
 ## Get ECharts
 
-+ Download on [echarts.baidu.com](http://echarts.baidu.com/download.html)
-+ `npm install echarts --save`
+        + Download on [echarts.baidu.com](http://echarts.baidu.com/download.html)
+        + `npm install echarts --save`
 
 ## Docs
 
-+ [Tutorial](http://echarts.baidu.com/tutorial.html)
-+ [API](http://echarts.baidu.com/api.html)
-+ [Option Manual](http://echarts.baidu.com/option.html)
+        + [Tutorial](http://echarts.baidu.com/tutorial.html)
+        + [API](http://echarts.baidu.com/api.html)
+        + [Option Manual](http://echarts.baidu.com/option.html)
 
 We will release the English doc soon:)
 
@@ -26,9 +26,9 @@ All rights reserved.
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice,
+        1. Redistributions of source code must retain the above copyright notice, this
+        list of conditions and the following disclaimer.
+        2. Redistributions in binary form must reproduce the above copyright notice,
    this list of conditions and the following disclaimer in the documentation
    and/or other materials provided with the distribution.
 
