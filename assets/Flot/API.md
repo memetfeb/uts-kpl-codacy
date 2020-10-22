@@ -625,7 +625,7 @@ interpret the timestamps according to that time zone.
 Once you've gotten the timestamps into the data and specified "time"
 as the axis mode, Flot will automatically generate relevant ticks and
 format them. As always, you can tweak the ticks via the "ticks" option
-- just remember that the values should be timestamps (numbers), not
+        - just remember that the values should be timestamps (numbers), not
 Date objects.
 
 Tick generation and formatting can also be controlled separately
@@ -1087,7 +1087,7 @@ bottom because that's what works with IE.
 The Plot object returned from the plot function has some methods you
 can call:
 
- - highlight(series, datapoint)
+    - highlight(series, datapoint)
 
     Highlight a specific datapoint in the data series. You can either
     specify the actual objects, e.g. if you got them from a
@@ -1095,7 +1095,7 @@ can call:
     highlight(1, 3) to highlight the fourth point in the second series
     (remember, zero-based indexing).
 
- - unhighlight(series, datapoint) or unhighlight()
+    - unhighlight(series, datapoint) or unhighlight()
 
     Remove the highlighting of the point, same parameters as
     highlight.
@@ -1103,7 +1103,7 @@ can call:
     If you call unhighlight with no parameters, e.g. as
     plot.unhighlight(), all current highlights are removed.
 
- - setData(data)
+    - setData(data)
 
     You can use this to reset the data used. Note that axis scaling,
     ticks, legend etc. will not be recomputed (use setupGrid() to do
@@ -1115,7 +1115,7 @@ can call:
     for large datasets, almost all the time is consumed in draw()
     plotting the data so in this case don't bother.
 
- - setupGrid()
+    - setupGrid()
 
     Recalculate and set axis scaling, ticks, legend etc.
 
@@ -1125,11 +1125,11 @@ can call:
     they're drawn on the canvas. You need to call draw() to get the
     canvas redrawn.
 
- - draw()
+    - draw()
 
     Redraws the plot canvas.
 
- - triggerRedrawOverlay()
+    - triggerRedrawOverlay()
 
     Schedules an update of an overlay canvas used for drawing
     interactive things like a selection and point highlights. This
@@ -1138,20 +1138,20 @@ can call:
     redraws (e.g. from a mousemove). You can get to the overlay by
     setting up a drawOverlay hook.
 
- - width()/height()
+    - width()/height()
 
     Gets the width and height of the plotting area inside the grid.
     This is smaller than the canvas or placeholder dimensions as some
     extra space is needed (e.g. for labels).
 
- - offset()
+    - offset()
 
     Returns the offset of the plotting area inside the grid relative
     to the document, useful for instance for calculating mouse
     positions (event.pageX/Y minus this offset is the pixel position
     inside the plot).
 
- - pointOffset({ x: xpos, y: ypos })
+    - pointOffset({ x: xpos, y: ypos })
 
     Returns the calculated offset of the data point at (x, y) in data
     space within the placeholder div. If you are working with multiple
@@ -1162,14 +1162,14 @@ can call:
       // o.left and o.top now contains the offset within the div
     ````
 
- - resize()
+    - resize()
 
     Tells Flot to resize the drawing canvas to the size of the
     placeholder. You need to run setupGrid() and draw() afterwards as
     canvas resizing is a destructive operation. This is used
     internally by the resize plugin.
 
- - shutdown()
+    - shutdown()
 
     Cleans up any event handlers Flot has currently registered. This
     is used internally.
@@ -1179,7 +1179,7 @@ workings of Flot which is useful in some cases. Note that if you change
 something in the objects returned, you're changing the objects used by
 Flot to keep track of its state, so be careful.
 
-  - getData()
+    - getData()
 
     Returns an array of the data series currently used in normalized
     form with missing settings filled in according to the global
@@ -1198,7 +1198,7 @@ Flot to keep track of its state, so be careful.
     array to get to the next point so for a dataset consisting only of
     (x,y) pairs it would be 2).
 
-  - getAxes()
+    - getAxes()
 
     Gets an object with the axes. The axes are returned as the
     attributes of the object, so for instance getAxes().xaxis is the
@@ -1217,17 +1217,17 @@ Flot to keep track of its state, so be careful.
     y2axis.used to see whether the axis is associated with any data
     points and y2axis.show to see if it is currently shown. 
  
-  - getPlaceholder()
+    - getPlaceholder()
 
     Returns placeholder that the plot was put into. This can be useful
     for plugins for adding DOM elements or firing events.
 
-  - getCanvas()
+     - getCanvas()
 
     Returns the canvas used for drawing in case you need to hack on it
     yourself. You'll probably need to get the plot offset too.
   
-  - getPlotOffset()
+     - getPlotOffset()
 
     Gets the offset that the grid has within the canvas as an object
     with distances from the canvas edges as "left", "right", "top",
@@ -1235,7 +1235,7 @@ Flot to keep track of its state, so be careful.
     placed at (left, top), its center will be at the top-most, left
     corner of the grid.
 
-  - getOptions()
+     - getOptions()
 
     Gets the options for the plot, normalized, with default values
     filled in. You get a reference to actual values used by Flot, so
@@ -1253,24 +1253,24 @@ gets access to the internal data structures in Flot.
 
 Here's an overview of the phases Flot goes through:
 
-  1. Plugin initialization, parsing options
+    1. Plugin initialization, parsing options
   
-  2. Constructing the canvases used for drawing
+    2. Constructing the canvases used for drawing
 
-  3. Set data: parsing data specification, calculating colors,
+    3. Set data: parsing data specification, calculating colors,
      copying raw data points into internal format,
      normalizing them, finding max/min for axis auto-scaling
 
-  4. Grid setup: calculating axis spacing, ticks, inserting tick
+    4. Grid setup: calculating axis spacing, ticks, inserting tick
      labels, the legend
 
-  5. Draw: drawing the grid, drawing each of the series in turn
+    5. Draw: drawing the grid, drawing each of the series in turn
 
-  6. Setting up event handling for interactive features
+    6. Setting up event handling for interactive features
 
-  7. Responding to events, if any
+    7. Responding to events, if any
 
-  8. Shutdown: this mostly happens in case a plot is overwritten 
+    8. Shutdown: this mostly happens in case a plot is overwritten 
 
 Each hook is simply a function which is put in the appropriate array.
 You can add them through the "hooks" option, and they are also available
@@ -1292,7 +1292,7 @@ The available hooks are described below. All hook callbacks get the
 plot object as first parameter. You can find some examples of defined
 hooks in the plugins bundled with Flot.
 
- - processOptions  [phase 1]
+    - processOptions  [phase 1]
 
     ```function(plot, options)```
    
@@ -1302,7 +1302,7 @@ hooks in the plugins bundled with Flot.
     enabled and then turn on or off other options.
 
  
- - processRawData  [phase 3]
+    - processRawData  [phase 3]
 
     ```function(plot, series, data, datapoints)```
  
@@ -1353,7 +1353,7 @@ hooks in the plugins bundled with Flot.
     "autoscale" determines whether the value is considered when calculating an
     automatic min-max range for the axes that the value is plotted against.
 
- - processDatapoints  [phase 3]
+    - processDatapoints  [phase 3]
 
     ```function(plot, series, datapoints)```
 
@@ -1375,7 +1375,7 @@ hooks in the plugins bundled with Flot.
     Note that you must leave datapoints in a good condition as Flot
     doesn't check it or do any normalization on it afterwards.
 
- - processOffset  [phase 4]
+    - processOffset  [phase 4]
 
     ```function(plot, offset)```
 
@@ -1385,14 +1385,14 @@ hooks in the plugins bundled with Flot.
     an object with attributes "top", "bottom", "left" and "right",
     corresponding to the margins on the four sides of the plot.
 
- - drawBackground [phase 5]
+    - drawBackground [phase 5]
 
     ```function(plot, canvascontext)```
 
     Called before all other drawing operations. Used to draw backgrounds
     or other custom elements before the plot or axes have been drawn.
 
- - drawSeries  [phase 5]
+    - drawSeries  [phase 5]
 
     ```function(plot, canvascontext, series)```
 
@@ -1400,7 +1400,7 @@ hooks in the plugins bundled with Flot.
     standard drawing routine has been called in the loop that draws
     each series.
 
- - draw  [phase 5]
+    - draw  [phase 5]
 
     ```function(plot, canvascontext)```
 
@@ -1409,7 +1409,7 @@ hooks in the plugins bundled with Flot.
     been plotted (in case any points, lines or bars have been turned
     on). For examples of how to draw things, look at the source code.
 
- - bindEvents  [phase 6]
+     - bindEvents  [phase 6]
 
     ```function(plot, eventHolder)```
 
@@ -1443,7 +1443,7 @@ hooks in the plugins bundled with Flot.
     plot.getPlaceholder() - that's probably also the one you should use
     if you need to fire a custom event.
 
- - drawOverlay  [phase 7]
+    - drawOverlay  [phase 7]
 
     ```function (plot, canvascontext)```
 
@@ -1459,7 +1459,7 @@ hooks in the plugins bundled with Flot.
     metrics computed by Flot, e.g. plot.width()/plot.height(). See the
     crosshair plugin for an example.
 
- - shutdown  [phase 8]
+     - shutdown  [phase 8]
 
     ```function (plot, eventHolder)```
 

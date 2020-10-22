@@ -5,37 +5,37 @@
 
 ## What's new in v0.9.0?
 
-* Fix #49 runtime option override support
-* Fix #48 extend bower.json
+        * Fix #49 runtime option override support
+        * Fix #48 extend bower.json
 
-* __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
+        * __Note__: this version replaces the not official supported `aria-valuetransitionsgoal` with `data-transitionsgoal` which may affect (or brick) your progressbars.
 
-* __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickering under some circumstances (e.g. slow transitions). To preserve correct progressbar functionality + appearance this bs feature is reverted in v0.8.3. (and reverted by bootstrap in 3.3.0)
+        * __Note__: Bootstrap's [low percentage styles](http://getbootstrap.com/components/#progress-low-percentages) (introduced in 3.2.0) causes flickering under some circumstances (e.g. slow transitions). To preserve correct progressbar functionality + appearance this bs feature is reverted in v0.8.3. (and reverted by bootstrap in 3.3.0)
 
-* __Note__: Stacked progressbars are not supported by now.
+        * __Note__: Stacked progressbars are not supported by now.
 
 
 ## Demo
 
-* http://www.minddust.com/project/bootstrap-progressbar/demo/
+        * http://www.minddust.com/project/bootstrap-progressbar/demo/
 
 
 ## Installation
 
-* Download the latest release: [v0.9.0](https://github.com/minddust/bootstrap-progressbar/archive/v0.9.0.zip)
-* Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
-* Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
+        * Download the latest release: [v0.9.0](https://github.com/minddust/bootstrap-progressbar/archive/v0.9.0.zip)
+        * Clone the repository: `git clone git@github.com:minddust/bootstrap-progressbar.git`
+        * Install with [Bower](http://bower.io): `bower install bootstrap-progressbar`
 
 
 ## Usage
 
-1. include `bootstrap-progressbar.js`
+    1. include `bootstrap-progressbar.js`
 
     ```html
     <script type="text/javascript" src="bootstrap-progressbar.js"></script>
     ```
 
-2. activate `bootstrap-progressbar` functionality on progressbars of your choice:
+    2. activate `bootstrap-progressbar` functionality on progressbars of your choice:
 
 
     ```javascript
@@ -43,9 +43,9 @@
     $('.progress .progress-bar').progressbar();  // bootstrap 3
     ```
 
-3. set the `aria` attribute and __remove__ the `width` style attribute (alternatively you can set it to 0)
+    3. set the `aria` attribute and __remove__ the `width` style attribute (alternatively you can set it to 0)
 
-    1. `data-transitiongoal`
+        1. `data-transitiongoal`
 
         ```html
         <div class="progress">
@@ -53,7 +53,7 @@
         </div>
         ```
 
-    2. `aria-valuemin` (default: 0) and `aria-valuemax` (default: 100)
+        2. `aria-valuemin` (default: 0) and `aria-valuemax` (default: 100)
 
         ```html
         <div class="progress">
@@ -64,10 +64,10 @@
 
 ## Usage Extended
 
-* Do I need the additional style file?
+        * Do I need the additional style file?
 
-    * for the horizontal bar with no or filled text: __NO__
-    * for any vertical bars or the horizontal bar with centered text or right aligned bar: __YES__
+            * for the horizontal bar with no or filled text: __NO__
+            * for any vertical bars or the horizontal bar with centered text or right aligned bar: __YES__
 
         less:
 
@@ -89,7 +89,7 @@
 
         you can find your needed css, less or scss files inside the specific subdirectories.
 
-* Multiple trigger
+        * Multiple trigger
 
     You can trigger progressbar as much as you want. Just change your attribute(s) and trigger `.progressbar()` again. All settings made before will be kept.
 
@@ -134,9 +134,9 @@ Is the time in milliseconds which will elapse between every text refresh, `aria-
 
 Determines if and where to display text on the progressbar. Possible options:
 
-* `none` __no text__
-* `fill` __text on filled bar__
-* `center` __text on center__ *(this mode changes css / html due to styling requirements)*
+        * `none` __no text__
+        * `fill` __text on filled bar__
+        * `center` __text on center__ *(this mode changes css / html due to styling requirements)*
 
 ### use_percentage
 
@@ -188,17 +188,17 @@ It takes 1 argument which is the error message.
 ## Customisation
 
 ### alignment
-* to use a horizontal progressbar which is align to the right you have to add `right` to the `progress` element.
+        * to use a horizontal progressbar which is align to the right you have to add `right` to the `progress` element.
 
    ```html
    <div class="progress right">
    ```
-* to use a vertical progressbar you have to add `vertical` to the `progress` element.
+        * to use a vertical progressbar you have to add `vertical` to the `progress` element.
 
    ```html
    <div class="progress vertical">
    ```
-* to use a vertical progressbar which is align to the bottom you have to add `vertical` and `bottom` to the `progress` element.
+        * to use a vertical progressbar which is align to the bottom you have to add `vertical` and `bottom` to the `progress` element.
 
    ```html
    <div class="progress vertical bottom">
@@ -208,22 +208,22 @@ It takes 1 argument which is the error message.
 
 to change the animation itself you have to overwrite either less or css
 
-1. horizontal
-    * less
+    1. horizontal
+        * less
 
         ```css
         .progress .bar {
             .transition(width 2s ease-in-out);
         }
         ```
-    * scss
+        * scss
 
         ```css
         .progress.vertical .progress-bar {
             @include transition(width 2s ease-in-out);
         }
         ```
-    * css
+        * css
 
         ```css
         .progress .bar {
@@ -235,22 +235,22 @@ to change the animation itself you have to overwrite either less or css
         }
         ```
 
-1. vertical
-    * less
+    1. vertical
+        * less
 
         ```css
         .progress.vertical .bar {
             .transition(height 2s ease-in-out);
         }
         ```
-    * scss
+        * scss
 
         ```css
         .progress.vertical .bar {
             @include transition(height 2s ease-in-out);
         }
         ```
-    * css
+        * css
 
         ```css
         .progress.vertical .bar {
@@ -264,7 +264,7 @@ to change the animation itself you have to overwrite either less or css
 
 ## Known Problems
 
-* Looks like iOS Safari is flooring the width of the transition. So if you want to display text with a correct value you have to use a full bar width **greater or equal 100px**.
+        * Looks like iOS Safari is flooring the width of the transition. So if you want to display text with a correct value you have to use a full bar width **greater or equal 100px**.
 
 ## Copyright and license
 

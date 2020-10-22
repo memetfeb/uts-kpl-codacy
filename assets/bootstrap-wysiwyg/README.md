@@ -1,5 +1,5 @@
 bootstrap-wysiwyg
-=================
+  =================
 [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/steveathon/bootstrap-wysiwyg)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/steveathon/bootstrap-wysiwyg)
 
@@ -10,26 +10,26 @@ This project was originally built for [MindMup](http://www.mindmup.com) and has 
 Development is active, and ongoing.
 
 Features
------------
+  -----------
 
-* Automatically binds standard hotkeys for common operations on Mac and Windows
-* Allows a custom built toolbar with no magic markup generators enabling the web site to use all the goodness of Bootstrap
-* Does not force any styling - it's all up to you
-* Uses standard browser features, no magic non-standard code, toolbar and keyboard configurable to execute any supported [browser command](https://developer.mozilla.org/en/docs/Rich-Text_Editing_in_Mozilla
-)
-* Does not create a separate frame, backup text areas etc - instead keeps it simple and runs everything inline in a DIV
-* (Optionally) cleans up trailing whitespace and empty divs and spans
-* Requires a modern browser (See SUPPORTED)
-* Supports mobile devices (See SUPPORTED)
-* Supports multiple instances
-* HTML Sanitization
-* Drag and drop files to insert images
-* Supports image upload
-* Supports image capture on mobile devices
-* Events
+    * Automatically binds standard hotkeys for common operations on Mac and Windows
+    * Allows a custom built toolbar with no magic markup generators enabling the web site to use all the goodness of Bootstrap
+    * Does not force any styling - it's all up to you
+    * Uses standard browser features, no magic non-standard code, toolbar and keyboard configurable to execute any supported [browser command](https://developer.mozilla.org/en/docs/Rich-Text_Editing_in_Mozilla
+    )
+    * Does not create a separate frame, backup text areas etc - instead keeps it simple and runs everything inline in a DIV
+    * (Optionally) cleans up trailing whitespace and empty divs and spans
+    * Requires a modern browser (See SUPPORTED)
+    * Supports mobile devices (See SUPPORTED)
+    * Supports multiple instances
+    * HTML Sanitization
+    * Drag and drop files to insert images
+    * Supports image upload
+    * Supports image capture on mobile devices
+    * Events
 
 Basic Usage
------------
+  -----------
 
 ```javascript
 $('#editor').wysiwyg();
@@ -75,7 +75,7 @@ $('#editor').cleanHtml()
 ```
 
 Customising
------------
+  -----------
 You can assign commands to hotkeys and toolbar links. For a toolbar link, just put the execCommand command name into a data-edit attribute.
 For more info on execCommand, see the [QuirksMode](http://www.quirksmode.org/dom/execCommand.html) and [Mozilla Developer](https://developer.mozilla.org/en/docs/Rich-Text_Editing_in_Mozilla) documentation.
 
@@ -119,7 +119,7 @@ $('#editor').wysiwyg({
 ```
 
 Events
-------
+    ------
 
 #### Change
 Fired whenever anything changes. See this example [events.html](examples/events.html)
@@ -130,34 +130,34 @@ $('#editor').wysiwyg().on('change', function(){
 ```
 
 Styling for mobile devices
---------------------------
+  --------------------------
 
 This editor should work pretty well with mobile devices, but you'll need to consider the following things when styling it:
-- keyboards on mobile devices take a huge part of the screen
-- having to scroll the screen to touch the toolbar can cause the editing component to lose focus, and the mobile device keyboard might go away
-- mobile devices tend to move the screen viewport around to ensure that the focused element is shown, so it's best that the edit box is glued to the top
+    - keyboards on mobile devices take a huge part of the screen
+    - having to scroll the screen to touch the toolbar can cause the editing component to lose focus, and the mobile device keyboard might go away
+    - mobile devices tend to move the screen viewport around to ensure that the focused element is shown, so it's best that the edit box is glued to the top
 
 For the content attachment editor on MindMup, we apply the following rules to mobile device styling:
-- edit box is glued to the top, so the focus doesn't jump around
-- toolbar is below the edit box
-- on portrait screens, edit box size is 50% of the screen
-- on landscape screens, edit box size is 30% of the screen
-- as the screen gets smaller, non-critical toolbar buttons get hidden into a "other" menu
+    - edit box is glued to the top, so the focus doesn't jump around
+    - toolbar is below the edit box
+    - on portrait screens, edit box size is 50% of the screen
+    - on landscape screens, edit box size is 30% of the screen
+    - as the screen gets smaller, non-critical toolbar buttons get hidden into a "other" menu
 
 Dependencies
-------------
-* [jQuery](http://jquery.com/)
-* [jQuery HotKeys](https://github.com/jeresig/jquery.hotkeys)
-* [Bootstrap](http://twitter.github.com/bootstrap/)
+  ------------
+    * [jQuery](http://jquery.com/)
+    * [jQuery HotKeys](https://github.com/jeresig/jquery.hotkeys)
+    * [Bootstrap](http://twitter.github.com/bootstrap/)
 
 Thanks to
-------------
+    ------------
 @gojko 					@mindmup			@jordanh
 @beatnbite				@brutuscat			@VictorBjelkholm
 @mrmrs 					@tilleryd 			@pnevels
 
 History
-------------
+    ------------
 
 The original version of this code (below) appeared to be no longer maintained. There
 were a number of outstanding changes which needed to be merged in and a few which
@@ -166,10 +166,10 @@ master branch.
 
 I'll keep an eye out for future changes/improvements and pull them in as required.
 
-- Steve
+    - Steve
 
 Original Licence
-------------
+    ------------
 
 The original version of this tool can be found here:
 [bootstrap-wysiwyg](https://github.com/mindmup/bootstrap-wysiwyg)

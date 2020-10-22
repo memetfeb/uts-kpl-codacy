@@ -8,11 +8,11 @@ The Validator is cross-browser and will give you the power to use future-proof i
 
 ### Why should you use this?
 
-* Cross browser validation
-* Deals with all sorts of edge cases
-* Utilize new HTML5 types for unsupported browsers
-* Flexible error messaging system
-* Light-weight (19kb + comments, unminified)
+        * Cross browser validation
+        * Deals with all sorts of edge cases
+        * Utilize new HTML5 types for unsupported browsers
+        * Flexible error messaging system
+        * Light-weight (19kb + comments, unminified)
 
 ## Validation types support
 HTML5 offers a wide selection of input types. I saw no need to support them all, for example, a checkbox should not be validated as ‘required’ because why wouldn’t it be checked in the first place when the form is rendered?
@@ -20,20 +20,20 @@ HTML5 offers a wide selection of input types. I saw no need to support them all,
 For a full list of all the available Types, visit the working draft page.
 These input types can be validated by the the JS for – `<input type='foo' name='bar' />`. (Support is synthesized)
 
-* Text
-* Email
-* Password
-* Number
-* Date
-* Time
-* URL
-* Search
-* File
-* Tel
-* Checkbox
-* Select
-* Textarea
-* Hidden – Hidden fields can also have the ‘required’ attribute
+        * Text
+        * Email
+        * Password
+        * Number
+        * Date
+        * Time
+        * URL
+        * Search
+        * File
+        * Tel
+        * Checkbox
+        * Select
+        * Textarea
+        * Hidden – Hidden fields can also have the ‘required’ attribute
 
 
 ## Basic semantics
