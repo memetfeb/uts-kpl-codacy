@@ -47,11 +47,11 @@ Works with jQuery 1.4.2 and newer.
 
 It is known to be working with all the major browsers on all available platforms (Win/Mac/Linux)
 
- * IE 6/7/8+
- * FF 1.5/2/3+
- * Opera-9+
- * Safari-3+
- * Chrome-0.2+
+    * IE 6/7/8+
+    * FF 1.5/2/3+
+    * Opera-9+
+    * Safari-3+
+    * Chrome-0.2+
 
 ## Browserify Compatibility
 If you want to include this module in a Browserified project, just add it to node_modules and require it.
@@ -84,9 +84,9 @@ You can use namespacing by adding a suffix to the event type (e.g. `keyup.toggle
 Hotkeys aren't tracked if the user is focused within an input element or any element that has `contenteditable="true"` unless you bind the hotkey directly to the element. This helps to avoid conflict with normal user typing.
 If you don't want this, you can change the booleans of the following to suit:
 
- * `jQuery.hotkeys.options.filterInputAcceptingElements`
- * `jQuery.hotkeys.options.filterContentEditable`
- * `jQuery.hotkeys.options.filterTextInputs` (deprecated, will be removed in a later version)
+    * `jQuery.hotkeys.options.filterInputAcceptingElements`
+    * `jQuery.hotkeys.options.filterContentEditable`
+    * `jQuery.hotkeys.options.filterTextInputs` (deprecated, will be removed in a later version)
 
 ### Meta and Hyper Keys
 Meta and hyper keys don't register on `keyup` in any browser tested.

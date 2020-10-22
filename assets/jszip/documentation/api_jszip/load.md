@@ -30,15 +30,15 @@ update will impact the stored data.
 
 Zip features supported by this method :
 
-* Compression (<code>DEFLATE</code> supported)
-* zip with data descriptor
-* ZIP64
-* UTF8 in file name, UTF8 in file content
+    * Compression (<code>DEFLATE</code> supported)
+    * zip with data descriptor
+    * ZIP64
+    * UTF8 in file name, UTF8 in file content
 
 Zip features not (yet) supported :
 
-* password protected zip
-* multi-volume zip
+    * password protected zip
+    * multi-volume zip
 
 
 __About `decodeFileName`__ :

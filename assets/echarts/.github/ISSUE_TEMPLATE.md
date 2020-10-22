@@ -6,14 +6,12 @@
 
 
 #### 版本及环境 (Version & Environment)
-+ ECharts 版本 (ECharts version):
-+ 浏览器类型和版本 (Browser version):
-+ 操作系统类型和版本 (OS Version):
+        + ECharts 版本 (ECharts version):
+        + 浏览器类型和版本 (Browser version):
+        + 操作系统类型和版本 (OS Version):
 
 
 #### 重现步骤 (Steps to reproduce)
-1.
-2.
 
 
 #### 期望结果 (Expected behaviour)

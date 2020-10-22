@@ -52,9 +52,9 @@ Parameters and Events are describing on the table below.
 
 Include the following JavaScript and css files on your page. 
 
-1. jQuery Library file (Don't include if you already have it on your page) 
-2. CSS(Style Sheet) file for Smart Wizard 
-3. JavaScript plug-in file for Smart Wizard
+        1. jQuery Library file (Don't include if you already have it on your page) 
+        2. CSS(Style Sheet) file for Smart Wizard 
+        3. JavaScript plug-in file for Smart Wizard
 
 To include the files copy and paste the below lines inside the head tag (`<head> </head>`) of your page. 
 Make sure the paths to the files are correct with your working environment.
@@ -174,8 +174,8 @@ example:
 
 Please see the ajax contents demo and following files on the source code to know how ajax content loading is implemented.
 
-1. *smartwizard2-ajax.htm*
-2. *services/service.php*
+        1. *smartwizard2-ajax.htm*
+        2. *services/service.php*
 
 ### Input validation
 
@@ -234,8 +234,8 @@ $('#wizard').smartWizard('setError',{stepnum:3,iserror:true});
 
 It takes two arguments 
 
-1. stepnum :- Step number to which is highlighted as error 
-2. iserror :- true = set the step as error step and false = remove the error highlighting 
+        1. stepnum :- Step number to which is highlighted as error 
+        2. iserror :- true = set the step as error step and false = remove the error highlighting 
 
 example:
 
