@@ -69,11 +69,7 @@ and dependencies (minified).
 	var pluginNS="mCustomScrollbar",
 		pluginPfx="mCS",
 		defaultSelector=".mCustomScrollbar",
-	
-	
 		
-	
-	
 	/* 
 	----------------------------------------
 	DEFAULT OPTIONS 

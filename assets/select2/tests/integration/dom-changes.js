@@ -112,7 +112,7 @@ test('adding a new selected option changes the value', function (assert) {
       'The selection did not change to Three'
     );
 
-    if (expected != 2) {
+    if (expected !== 2) {
       asyncDone();
     }
   });

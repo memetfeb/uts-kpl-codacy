@@ -799,7 +799,7 @@ For bars, fillColor can be a gradient, see the gradient documentation
 below. "barWidth" is the width of the bars in units of the x axis (or
 the y axis if "horizontal" is true), contrary to most other measures
 that are specified in pixels. For instance, for time series the unit
-is milliseconds so 24 * 60 * 60 * 1000 produces bars with the width of
+is milliseconds so 24 x 60 x 60 x 1000 produces bars with the width of
 a day. "align" specifies whether a bar should be left-aligned
 (default), right-aligned or centered on top of the value it represents. 
 When "horizontal" is on, the bars are drawn horizontally, i.e. from the 
