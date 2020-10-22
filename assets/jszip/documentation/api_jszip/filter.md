@@ -21,7 +21,6 @@ file         | ZipObject | the file being tested. See [ZipObject]({{site.baseurl
 
 The predicate must return true if the file should be included, false otherwise.
 
-
 __Returns__ : An array of matching ZipObject.
 
 __Throws__ : Nothing.
@@ -39,5 +38,3 @@ zip.filter(function (relativePath, file){
   return true/false;
 });
 ```
-
-

@@ -78,7 +78,6 @@ Hotkeys aren't tracked if you're inside of an input element (unless you explicit
 
 You can use namespacing by adding a suffix to the event type (e.g. `keyup.toggle`)
 
-
 ## Hotkeys within inputs
 
 Hotkeys aren't tracked if the user is focused within an input element or any element that has `contenteditable="true"` unless you bind the hotkey directly to the element. This helps to avoid conflict with normal user typing.

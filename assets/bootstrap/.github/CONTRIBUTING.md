@@ -68,7 +68,6 @@ Guidelines for bug reports:
    case](https://css-tricks.com/reduced-test-cases/) and a live example.
    [This JS Bin](https://jsbin.com/lolome/edit?html,output) is a helpful template.
 
-
 A good bug report shouldn't leave others needing to chase you up for more
 information. Please try to be as detailed as possible in your report. What is
 your environment? What steps will reproduce the issue? What browser(s) and OS

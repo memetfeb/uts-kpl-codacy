@@ -1,4 +1,3 @@
-
 0.8.1 / 2015-06-26
     ==================
 
@@ -125,7 +124,6 @@
 
 0.3.2 / 2013-12-27
   ==================
-
       * Standalone -> dist, update Readme, add changelog
       * Merge pull request from vesln:min
       * Add minified versions

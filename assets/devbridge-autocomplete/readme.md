@@ -171,7 +171,6 @@ Style sample:
 .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
 ```
 
-
 ##Response Format
 
 Response from the server must be JSON formatted following JavaScript object:

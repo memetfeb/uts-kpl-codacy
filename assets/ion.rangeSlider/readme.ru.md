@@ -93,7 +93,6 @@ $("#example_id").ionRangeSlider();
 Если вы новичок в веб разработке и не уверены как правильно подключить этот плагин на вашу страницу, то скачайте вот
 <a href="http://ionden.com/a/plugins/ion.rangeSlider/ionRangeSliderDemo.zip" class="button">этот демо пример</a>
 
-
 ## Миграция с версии 1.x на 2.x
         * Все параметры (кроме функций) теперь записываются так: <b>param_name</b>, а не paramName
         * Изменились названия некоторых параметров: hasGrid &rarr; <b>grid</b>, onLoad &rarr; <b>onStart</b>

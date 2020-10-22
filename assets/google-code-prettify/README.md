@@ -12,7 +12,6 @@ or [Yeoman](http://yeoman.io/)
 
 	yeoman install google-code-prettify
 
-
 ## Usage
 
 The prettify script is AMD compatible and can be used modularly. Here is an example of it in an AMD module:

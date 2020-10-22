@@ -3,7 +3,6 @@ Contributing to Chart.js
 
 Contributions to Chart.js are welcome and encouraged, but please have a look through the guidelines in this document before raising an issue, or writing code for the project.
 
-
 Using issues
     ------------
 
@@ -14,7 +13,6 @@ If you're suggesting a new chart type, please take a look at [writing new chart 
 To keep the library lightweight for everyone, it's unlikely we'll add many more chart types to the core of Chart.js, but issues are a good medium to design and spec out how new chart types could work and look.
 
 Please do not use issues for support requests. For help using Chart.js, please take a look at the [`chartjs`](http://stackoverflow.com/questions/tagged/chartjs) tag on Stack Overflow.
-
 
 Reporting bugs
     --------------
@@ -29,12 +27,10 @@ Guidlines for reporting bugs:
 
 Please provide any additional details associated with the bug, if it's browser or screen density specific, or only happens with a certain configuration or data.
 
-
 Local development
     -----------------
 
 Run `npm install` to install all the libraries, then run `gulp dev --test` to build and run tests as you make changes.
-
 
 Pull requests
     -------------
