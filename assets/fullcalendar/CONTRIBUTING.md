@@ -92,14 +92,14 @@ var o = { a: 1, b: 2, c: 3 };
 
 Other exceptions:
 
-- please ignore anything about Google Closure Compiler or the `goog` library
-- please do not write JSDoc comments
+		- please ignore anything about Google Closure Compiler or the `goog` library
+		- please do not write JSDoc comments
 
 Notes about whitespace:
 
-- **use *tabs* instead of spaces**
-- separate functions with *2* blank lines
-- separate logical blocks within functions with *1* blank line
+		- **use *tabs* instead of spaces**
+		- separate functions with *2* blank lines
+		- separate logical blocks within functions with *1* blank line
 
 Run the command line tool to automatically check your style:
 
@@ -110,9 +110,9 @@ Run the command line tool to automatically check your style:
 
 If you have edited code (including **tests** and **translations**) and would like to submit a pull request, please make sure you have done the following:
 
-1. Conformed to the style guide (successfully run `grunt check`)
+		1. Conformed to the style guide (successfully run `grunt check`)
 
-2. Written automated tests. View the [Automated Test Readme]
+		2. Written automated tests. View the [Automated Test Readme]
 
 
 [JSFiddle/JSBin]: http://fullcalendar.io/wiki/Reporting-Bugs/

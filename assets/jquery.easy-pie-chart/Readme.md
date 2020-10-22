@@ -12,17 +12,17 @@
 ## Features
 [![](https://github.com/rendro/easy-pie-chart/raw/master/demo/img/easy-pie-chart.png)](http://drbl.in/ezuc)
 
-* highly customizable
-* very easy to implement
-* resolution independent (retina optimized)
-* uses `requestAnimationFrame` for smooth animations on modern devices and
-* works in all modern browsers, even in IE7+ with [excanvas](https://code.google.com/p/explorercanvas/wiki/Instructions)
+        * highly customizable
+        * very easy to implement
+        * resolution independent (retina optimized)
+        * uses `requestAnimationFrame` for smooth animations on modern devices and
+        * works in all modern browsers, even in IE7+ with [excanvas](https://code.google.com/p/explorercanvas/wiki/Instructions)
 
 #### framework support
 
-* Vanilla JS *(no dependencies)* (~872 bytes)
-* jQuery plugin (~921 bytes)
-* Angular Module (~983 bytes)
+        * Vanilla JS *(no dependencies)* (~872 bytes)
+        * jQuery plugin (~921 bytes)
+        * Angular Module (~983 bytes)
 
 
 
@@ -244,11 +244,11 @@ When using [RequireJS](http://requirejs.org) you can define your own name. Examp
 ## Browser Support
 Native support
 
-* Chrome
-* Safari
-* FireFox
-* Opera
-* Internet Explorer 9+
+        * Chrome
+        * Safari
+        * FireFox
+        * Opera
+        * Internet Explorer 9+
 
 Support for Internet Explorer 7 and 8 with [excanvas](https://code.google.com/p/explorercanvas/wiki/Instructions) polyfill.
 

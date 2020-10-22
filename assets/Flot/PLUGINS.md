@@ -85,9 +85,9 @@ HTML page and then it can be used with:
 
 This simple plugin illustrates a couple of points:
 
- - It uses the anonymous function trick to avoid name pollution.
- - It can be enabled/disabled through an option.
- - Variables in the init function can be used to store plot-specific
+        - It uses the anonymous function trick to avoid name pollution.
+        - It can be enabled/disabled through an option.
+        - Variables in the init function can be used to store plot-specific
    state between the hooks.
 
 The two last points are important because there may be multiple plots

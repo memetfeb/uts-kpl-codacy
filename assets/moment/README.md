@@ -24,17 +24,17 @@ with `src/*`. We might place that in a commit hook in the future.
 
 There are a number of small backwards incompatible changes with version 2.0.0. [See the full descriptions here](https://gist.github.com/timrwood/e72f2eef320ed9e37c51#backwards-incompatible-changes)
 
- * Changed language ordinal method to return the number + ordinal instead of just the ordinal.
+        * Changed language ordinal method to return the number + ordinal instead of just the ordinal.
 
- * Changed two digit year parsing cutoff to match strptime.
+        * Changed two digit year parsing cutoff to match strptime.
 
- * Removed `moment#sod` and `moment#eod` in favor of `moment#startOf` and `moment#endOf`.
+        * Removed `moment#sod` and `moment#eod` in favor of `moment#startOf` and `moment#endOf`.
 
- * Removed `moment.humanizeDuration()` in favor of `moment.duration().humanize()`.
+        * Removed `moment.humanizeDuration()` in favor of `moment.duration().humanize()`.
 
- * Removed the lang data objects from the top level namespace.
+        * Removed the lang data objects from the top level namespace.
 
- * Duplicate `Date` passed to `moment()` instead of referencing it.
+        * Duplicate `Date` passed to `moment()` instead of referencing it.
 
 ## [Changelog](https://github.com/moment/moment/blob/develop/CHANGELOG.md)
 

@@ -18,12 +18,12 @@ According to [Google](https://developers.google.com/mobile/articles/fast_buttons
 
 The library has been deployed as part of the [FT Web App](http://app.ft.com/) and is tried and tested on the following mobile browsers:
 
-* Mobile Safari on iOS 3 and upwards
-* Chrome on iOS 5 and upwards
-* Chrome on Android (ICS)
-* Opera Mobile 11.5 and upwards
-* Android Browser since Android 2
-* PlayBook OS 1 and upwards
+		* Mobile Safari on iOS 3 and upwards
+		* Chrome on iOS 5 and upwards
+		* Chrome on Android (ICS)
+		* Opera Mobile 11.5 and upwards
+		* Android Browser since Android 2
+		* PlayBook OS 1 and upwards
 
 ## When it isn't needed ##
 
@@ -127,9 +127,9 @@ Another example of when to use the `needsclick` class is with dropdowns in Twitt
 
 FastClick is designed to cope with many different browser oddities. Here are some examples to illustrate this:
 
-* [basic use](http://ftlabs.github.com/fastclick/examples/layer.html) showing the increase in perceived responsiveness
-* [triggering focus](http://ftlabs.github.com/fastclick/examples/focus.html) on an input element from a `click` handler
-* [input element](http://ftlabs.github.com/fastclick/examples/input.html) which never receives clicks but gets fast focus
+		* [basic use](http://ftlabs.github.com/fastclick/examples/layer.html) showing the increase in perceived responsiveness
+		* [triggering focus](http://ftlabs.github.com/fastclick/examples/focus.html) on an input element from a `click` handler
+		* [input element](http://ftlabs.github.com/fastclick/examples/input.html) which never receives clicks but gets fast focus
 
 ## Tests ##
 
