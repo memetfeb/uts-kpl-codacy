@@ -52,7 +52,6 @@ Note that in general Flot gives no guarantees if you change any of the
 objects you pass in to the plot function or get out of it since
 they're not necessarily deep-copied.
 
-
 ## Data Format ##
 
 The data is an array of data series:
@@ -154,7 +153,6 @@ Here's a complete example of a simple data specification:
 ]
 ```
 
-
 ## Plot Options ##
 
 All options are completely optional. They are documented individually
@@ -170,7 +168,6 @@ var options = {
 	
 $.plot(placeholder, data, options);
 ```
-
 
 ## Customizing the legend ##
 
@@ -236,7 +233,6 @@ sorted: function(a, b) {
     )
 }
 ```
-
 
 ## Customizing the axes ##
 
@@ -380,7 +376,6 @@ required for converting from canvas coordinates to data coordinates,
 e.g. for a mouse interaction where a certain pixel is clicked. If you
 don't use any interactive features of Flot, you may not need it.
 
-
 The rest of the options deal with the ticks.
 
 If you don't specify any ticks, a tick generator algorithm will make
@@ -485,7 +480,6 @@ the right, because the grid lines will then match the ticks in both
 ends. The trade-off is that the forced ticks won't necessarily be at
 natural places.
 
-
 ## Multiple axes ##
 
 If you need more than one x axis or y axis, you need to specify for
@@ -519,7 +513,6 @@ Generally, the various interfaces in Flot dealing with data points
 either accept an xaxis/yaxis parameter to specify which axis number to
 use (starting from 1), or lets you specify the coordinate directly as
 x2/x3/... or x2axis/x3axis/... instead of "x" or "xaxis".
-
 
 ## Time series data ##
 
@@ -723,7 +716,6 @@ to get a tick interval size of at least 1 month and correspondingly,
 if axis.tickSize is [2, "day"] in the tick formatter, the ticks have
 been produced with two days in-between.
 
-
 ## Customizing the data series ##
 
 ```js
@@ -857,7 +849,6 @@ colors: ["#d18b2c", "#dba255", "#919733"]
 
 If there are more data series than colors, Flot will try to generate
 extra colors by lightening and darkening colors in the theme.
-
 
 ## Customizing the grid ##
 
@@ -1039,7 +1030,6 @@ of interactive things (this works as a rate limiting device). The
 default is capped to 60 frames per second. You can set it to -1 to
 disable the rate limiting.
 
-
 ## Specifying gradients ##
 
 A gradient is specified like this:
@@ -1080,7 +1070,6 @@ bars: {
 
 Flot currently only supports vertical gradients drawn from top to
 bottom because that's what works with IE.
-
 
 ## Plot Methods ##
 
@@ -1242,7 +1231,6 @@ Flot to keep track of its state, so be careful.
     if you modify the values in here, Flot will use the new values.
     If you change something, you probably have to call draw() or
     setupGrid() or triggerRedrawOverlay() to see the change.
-    
 
 ## Hooks ##
 
@@ -1301,7 +1289,6 @@ hooks in the plugins bundled with Flot.
     values is needed. A plugin might use it to detect that it has been
     enabled and then turn on or off other options.
 
- 
     - processRawData  [phase 3]
 
     ```function(plot, series, data, datapoints)```
@@ -1469,7 +1456,6 @@ hooks in the plugins bundled with Flot.
     add a callback to clean up after you. Take a look at the section in
     the [PLUGINS](PLUGINS.md) document for more info.
 
-   
 ## Plugins ##
 
 Plugins extend the functionality of Flot. To use a plugin, simply
@@ -1491,7 +1477,6 @@ and add new public methods if needed.
 
 See the [PLUGINS](PLUGINS.md) document for details on how to write a plugin. As the
 above description hints, it's actually pretty easy.
-
 
 ## Version number ##
 

@@ -5,7 +5,6 @@
 Ion.RangeSlider. Is an easy, flexible and responsive range slider with tons of options.
 
 ***
-
         * Version: 2.1.4
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Project page and demos</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/ion.rangeSlider-2.1.4.zip">Download ZIP</a>
@@ -39,18 +38,15 @@ Ion.RangeSlider. Is an easy, flexible and responsive range slider with tons of o
         * For advanced users slider has callbacks (onStart, onChange, onFinish, onUpdate). Slider pastes all its params to callback first argument as object
         * Slider supports date and time
 
-
 ## Demos
 
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" class="switch__item">Basic demo</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_advanced.html" class="switch__item">Advanced demo</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html" class="switch__item">Interactions demo</a>
 
-
 ## Dependencies
 
         * <a href="http://jquery.com/" target="_blank">jQuery 1.8.x+</a>
-
 
 ## Usage
 
@@ -71,16 +67,13 @@ Plus, a skin for the slider. 5 skins are included. Choose one:
 
 Or use the included PSD file and design a custom skin.
 
-
 ## Install with bower
 
                 * bower install ionrangeslider
 
-
 ## Install with npm
 
         * npm install ion-rangeslider
-
 
 ## Initialisation
 
@@ -94,12 +87,10 @@ To initialise the slider, call ionRangeSlider on the element:
 $("#example_id").ionRangeSlider();
 ```
 
-
 ## Demo for juniors
 
 If your are new in web development and you are not sure how to correctly install the plugin to your web-page, please download
 <a href="http://ionden.com/a/plugins/ion.rangeSlider/ionRangeSliderDemo.zip" class="button">this demo example</a>
-
 
 ## Migrating from 1.x to 2.x
         * All params (except functions) are lowercase now: <b>param_name</b>, not paramName
@@ -109,7 +100,6 @@ If your are new in web development and you are not sure how to correctly install
 
 
 ## <a href="http://jsfiddle.net/IonDen/qv6yrjrv/" target="_blank">Experiments playground</a>
-
 
 ## Settings
 
@@ -386,7 +376,6 @@ If your are new in web development and you are not sure how to correctly install
     </tbody>
 </table>
 
-
 ## Description of data passed to callbacks (onChange and etc.)
 Result is object type and passed to callback as first argument:
 ```javascript
@@ -467,7 +456,6 @@ slider.reset();
 slider.destroy();
 ```
 
-
 ## One more look on demos
 
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" class="switch__item">Basic demo</a>
@@ -475,7 +463,6 @@ slider.destroy();
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html" class="switch__item">Interactions demo</a>
 
 All plugins options are covered in demos.
-
 
 ### <a href="history.md">Update history</a>
 

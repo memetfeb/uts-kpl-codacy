@@ -94,7 +94,6 @@ Important changes:
       This brings the benefits of YY to YYYY
     * [#2368](https://github.com/moment/moment/pull/2368) perf: use faster form of copying dates, across the board improvement
 
-
 ### 2.10.3 [See full changelog](https://gist.github.com/ichernev/f264b9bed5b00f8b1b7f)
 
     * add `moment.fn.to` and `moment.fn.toNow` (similar to `from` and `fromNow`)
@@ -532,4 +531,3 @@ Changed date format from php date format to custom format.
 ### 0.1.0
 
 Initial release
-

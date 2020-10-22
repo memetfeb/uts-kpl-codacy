@@ -40,7 +40,6 @@ Zip features not (yet) supported :
     * password protected zip
     * multi-volume zip
 
-
 __About `decodeFileName`__ :
 
 A zip file has a flag to say if the filename and comment are encoded with UTF-8.
@@ -73,7 +72,6 @@ __Example__
 var zip = new JSZip();
 zip.load(zipDataFromXHR);
 ```
-
 ```js
 require("fs").readFile("hello.zip", function (err, data) {
   if (err) throw err;
@@ -81,7 +79,6 @@ require("fs").readFile("hello.zip", function (err, data) {
   zip.load(data);
 }
 ```
-
 Using sub folders :
 
 ```js
@@ -102,4 +99,3 @@ zip.load(content, {
     }
 });
 ```
-

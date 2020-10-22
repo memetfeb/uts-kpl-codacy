@@ -1,11 +1,9 @@
-
 v2.7.3 (2016-06-02)
 -------------------
 
 internal enhancements that plugins can benefit from:
 		- EventEmitter not correctly working with stopListeningTo
 		- normalizeEvent hook for manipulating event data
-
 
 v2.7.2 (2016-05-20)
 -------------------
@@ -16,7 +14,6 @@ v2.7.2 (2016-05-20)
 		- fixed touch event dragging wrongfully beginning upon scrolling document (#3160)
 		- fixed minified JS still contained comments
 		- UI change: mouse users must hover over an event to reveal its resizers
-
 
 v2.7.1 (2016-05-01)
 -------------------
@@ -29,7 +26,6 @@ v2.7.1 (2016-05-01)
 		- misc automated test updates (#3139, #3147)
 		- Google Calendar htmlLink not always defined (#2844)
 
-
 v2.7.0 (2016-04-23)
 -------------------
 
@@ -41,12 +37,10 @@ touch device support (#994):
 				- time-range selecting
 			- `longPressDelay`
 
-
 v2.6.1 (2016-02-17)
 -------------------
 
 		- make `nowIndicator` positioning refresh on window resize
-
 
 v2.6.0 (2016-01-07)
 -------------------
@@ -57,13 +51,11 @@ v2.6.0 (2016-01-07)
 		- fix bug where external event dragging would not respect eventOverlap
 		- fix bug where external event dropping would not render the whole-day highlight
 
-
 v2.5.0 (2015-11-30)
 -------------------
 
 		- internal timezone refactor. fixes #2396, #2900, #2945, #2711
 		- internal "grid" system refactor. improved API for plugins.
-
 
 v2.4.0 (2015-08-16)
 -------------------
@@ -81,12 +73,10 @@ v2.4.0 (2015-08-16)
 [1904]: https://code.google.com/p/fullcalendar/issues/detail?id=1904
 [1910]: https://code.google.com/p/fullcalendar/issues/detail?id=1910
 
-
 v2.3.2 (2015-06-14)
 -------------------
 
 		- minor code adjustment in preparation for plugins
-
 
 v2.3.1 (2015-03-08)
 -------------------
@@ -98,7 +88,6 @@ v2.3.1 (2015-03-08)
 [PR220]: https://github.com/arshaw/fullcalendar/pull/220
 [2447]: https://code.google.com/p/fullcalendar/issues/detail?id=2447
 [PR179]: https://github.com/arshaw/fullcalendar/pull/179
-
 
 v2.3.0 (2015-02-21)
 -------------------
@@ -126,7 +115,6 @@ v2.3.0 (2015-02-21)
 [2428]: https://code.google.com/p/fullcalendar/issues/detail?id=2428
 [2330]: https://code.google.com/p/fullcalendar/issues/detail?id=2330
 
-
 v2.2.7 (2015-02-10)
 -------------------
 
@@ -137,7 +125,6 @@ v2.2.7 (2015-02-10)
 [2407]: https://code.google.com/p/fullcalendar/issues/detail?id=2407
 [2417]: https://code.google.com/p/fullcalendar/issues/detail?id=2417
 [2427]: https://code.google.com/p/fullcalendar/issues/detail?id=2427
-
 
 v2.2.6 (2015-01-11)
 -------------------
@@ -154,14 +141,12 @@ v2.2.6 (2015-01-11)
 [2395]: https://code.google.com/p/fullcalendar/issues/detail?id=2395
 [2157]: https://code.google.com/p/fullcalendar/issues/detail?id=2157
 
-
 v2.2.5 (2014-12-30)
 -------------------
 
 		- `buttonText` specified for custom views via the `views` option
 			- bugfix: wrong default value, couldn't override default
 			- feature: default value taken from locale
-
 
 v2.2.4 (2014-12-29)
 -------------------
@@ -176,7 +161,6 @@ v2.2.4 (2014-12-29)
 [2283]: https://code.google.com/p/fullcalendar/issues/detail?id=2283
 [1055]: https://code.google.com/p/fullcalendar/issues/detail?id=1055
 [2194]: https://code.google.com/p/fullcalendar/issues/detail?id=2194
-
 
 v2.2.3 (2014-11-26)
 -------------------
@@ -197,7 +181,6 @@ v2.2.3 (2014-11-26)
 [2122]: https://code.google.com/p/fullcalendar/issues/detail?id=2122
 [2370]: https://code.google.com/p/fullcalendar/issues/detail?id=2370
 
-
 v2.2.2 (2014-11-19)
 -------------------
 
@@ -205,14 +188,12 @@ v2.2.2 (2014-11-19)
 			- wouldn't recognize a lone-string Google Calendar ID if periods before the @ symbol
 			- removeEventSource wouldn't work when given a Google Calendar ID
 
-
 v2.2.1 (2014-11-19)
 -------------------
 
 		- Migrate Google Calendar plugin to use V3 of the API ([1526])
 
 [1526]: https://code.google.com/p/fullcalendar/issues/detail?id=1526
-
 
 v2.2.0 (2014-11-14)
 -------------------
@@ -238,7 +219,6 @@ v2.2.0 (2014-11-14)
 [2259]: https://code.google.com/p/fullcalendar/issues/detail?id=2259
 [2312]: https://code.google.com/p/fullcalendar/issues/detail?id=2312
 
-
 v2.1.1 (2014-08-29)
 -------------------
 
@@ -249,7 +229,6 @@ v2.1.1 (2014-08-29)
 [2203]: https://code.google.com/p/fullcalendar/issues/detail?id=2203
 [829]: https://code.google.com/p/fullcalendar/issues/detail?id=829
 [2263]: https://code.google.com/p/fullcalendar/issues/detail?id=2263
-
 
 v2.1.0 (2014-08-25)
 -------------------
@@ -349,7 +328,6 @@ Other issues resolved along the way:
 [2196]: https://code.google.com/p/fullcalendar/issues/detail?id=2196
 [111]: https://code.google.com/p/fullcalendar/issues/detail?id=111
 
-
 v2.0.3 (2014-08-15)
 -------------------
 
@@ -359,7 +337,6 @@ v2.0.3 (2014-08-15)
 
 [2221]: https://code.google.com/p/fullcalendar/issues/detail?id=2221
 [PR 117]: https://github.com/arshaw/fullcalendar/pull/177
-
 
 v2.0.2 (2014-06-24)
 -------------------
@@ -371,7 +348,6 @@ v2.0.2 (2014-06-24)
 [2191]: https://code.google.com/p/fullcalendar/issues/detail?id=2191
 [2187]: https://code.google.com/p/fullcalendar/issues/detail?id=2187
 [2082]: https://code.google.com/p/fullcalendar/issues/detail?id=2082
-
 
 v2.0.1 (2014-06-15)
 -------------------
@@ -399,7 +375,6 @@ v2.0.1 (2014-06-15)
 [2180]: https://code.google.com/p/fullcalendar/issues/detail?id=2180
 [PR 172]: https://github.com/arshaw/fullcalendar/pull/172
 
-
 v2.0.0 (2014-06-01)
 -------------------
 
@@ -422,7 +397,6 @@ JS/CSS for the project and will serve as the new [Bower] endpoint.
 [Jasmine]: http://jasmine.github.io/
 [Bower]: http://bower.io/
 
-
 v1.6.4 (2013-09-01)
 -------------------
 
@@ -444,7 +418,6 @@ v1.6.4 (2013-09-01)
 [1356]: https://code.google.com/p/fullcalendar/issues/detail?id=1356
 [1762]: https://code.google.com/p/fullcalendar/issues/detail?id=1762
 [PR 125]: https://github.com/arshaw/fullcalendar/pull/125
-
 
 v1.6.3 (2013-08-10)
 -------------------
@@ -478,7 +451,6 @@ v1.6.3 (2013-08-10)
 [PR 84]: https://github.com/arshaw/fullcalendar/pull/84
 [PR 56]: https://github.com/arshaw/fullcalendar/pull/56
 
-
 v1.6.2 (2013-07-18)
 -------------------
 
@@ -489,7 +461,6 @@ v1.6.2 (2013-07-18)
 [686]: https://code.google.com/p/fullcalendar/issues/detail?id=686
 [762]: https://code.google.com/p/fullcalendar/issues/detail?id=762
 
-
 v1.6.1 (2013-04-14)
 -------------------
 
@@ -499,7 +470,6 @@ v1.6.1 (2013-04-14)
 
 [1783]: https://code.google.com/p/fullcalendar/issues/detail?id=1783
 [1772]: https://code.google.com/p/fullcalendar/issues/detail?id=1772
-
 
 v1.6.0 (2013-03-18)
 -------------------
@@ -528,13 +498,11 @@ v1.6.0 (2013-03-18)
 [495]: https://code.google.com/p/fullcalendar/issues/detail?id=495
 [753]: https://code.google.com/p/fullcalendar/issues/detail?id=753
 
-
 v1.5.4 (2012-09-05)
 -------------------
 
 		- made compatible with jQuery 1.8.* (thx @archaeron)
 		- bundled with jQuery 1.8.1 and jQuery UI 1.8.23
-
 
 v1.5.3 (2012-02-06)
 -------------------
@@ -544,14 +512,12 @@ v1.5.3 (2012-02-06)
 
 [1168]: https://code.google.com/p/fullcalendar/issues/detail?id=1168
 
-
 v1.5.2 (2011-08-21)
 -------------------
 
 		- correctly process UTC "Z" ISO8601 date strings ([750])
 
 [750]: https://code.google.com/p/fullcalendar/issues/detail?id=750
-
 
 v1.5.1 (2011-04-09)
 -------------------
@@ -566,7 +532,6 @@ v1.5.1 (2011-04-09)
 [826]: https://code.google.com/p/fullcalendar/issues/detail?id=826
 [795]: https://code.google.com/p/fullcalendar/issues/detail?id=795
 [883]: https://code.google.com/p/fullcalendar/issues/detail?id=883
-
 
 v1.5 (2011-03-19)
 -----------------
@@ -624,7 +589,6 @@ v1.5 (2011-03-19)
 [355]: https://code.google.com/p/fullcalendar/issues/detail?id=355
 [504]: https://code.google.com/p/fullcalendar/issues/detail?id=504
 
-
 v1.4.11 (2011-02-22)
 --------------------
 
@@ -633,7 +597,6 @@ v1.4.11 (2011-02-22)
 		- bundled with jquery 1.5 and jquery-ui 1.8.9
 
 [790]: https://code.google.com/p/fullcalendar/issues/detail?id=790
-
 
 v1.4.10 (2011-01-02)
 --------------------
@@ -646,7 +609,6 @@ v1.4.10 (2011-01-02)
 [757]: https://code.google.com/p/fullcalendar/issues/detail?id=757
 [688]: https://code.google.com/p/fullcalendar/issues/detail?id=688
 
-
 v1.4.9 (2010-11-16)
 -------------------
 
@@ -657,7 +619,6 @@ v1.4.9 (2010-11-16)
 [111]: https://code.google.com/p/fullcalendar/issues/detail?id=111
 [306]: https://code.google.com/p/fullcalendar/issues/detail?id=306
 [679]: https://code.google.com/p/fullcalendar/issues/detail?id=679
-
 
 v1.4.8 (2010-10-16)
 -------------------
@@ -683,7 +644,6 @@ v1.4.8 (2010-10-16)
 [517]: https://code.google.com/p/fullcalendar/issues/detail?id=517
 [235]: https://code.google.com/p/fullcalendar/issues/detail?id=235
 
-
 v1.4.7 (2010-07-05)
 -------------------
 
@@ -705,7 +665,6 @@ v1.4.7 (2010-07-05)
 [429]: https://code.google.com/p/fullcalendar/issues/detail?id=429
 [412]: https://code.google.com/p/fullcalendar/issues/detail?id=412
 
-
 v1.4.6 (2010-05-31)
 -------------------
 
@@ -716,7 +675,6 @@ v1.4.6 (2010-05-31)
 		- when dragging an event, the highlighting reflects the duration of the event
 		- code compressing by Google Closure Compiler
 		- bundled with jQuery 1.4.2 and jQuery UI 1.8.1
-
 
 v1.4.5 (2010-02-21)
 -------------------
@@ -737,14 +695,12 @@ v1.4.5 (2010-02-21)
 [333]: https://code.google.com/p/fullcalendar/issues/detail?id=333
 [341]: https://code.google.com/p/fullcalendar/issues/detail?id=341
 
-
 v1.4.4 (2010-02-03)
 -------------------
 
 		- optimized event rendering in all views (events render in 1/10 the time)
 		- gotoDate() does not force the calendar to unnecessarily rerender
 		- render() method now correctly readjusts height
-
 
 v1.4.3 (2009-12-22)
 -------------------
@@ -759,7 +715,6 @@ v1.4.3 (2009-12-22)
 			- ajax event source removed after recently being added, events still displayed
 			- event not displayed when end is an empty string
 			- dynamically setting calendar height when no events have been fetched, throws error
-
 
 v1.4.2 (2009-12-02)
 -------------------
@@ -776,7 +731,6 @@ v1.4.2 (2009-12-02)
 			- guaranteed space on right side of agenda events (even when stacked)
 			- accepts ISO8601 dates with a space (instead of 'T')
 
-
 v1.4.1 (2009-10-31)
 -------------------
 
@@ -786,7 +740,6 @@ v1.4.1 (2009-10-31)
 			- year/month/date option sometimes wouldn't set correctly (depending on current date)
 			- daylight savings issue caused agenda views to start at 1am (for BST users)
 		- cleanup of gcal.js code
-
 
 v1.4 (2009-10-19)
 -----------------
@@ -809,7 +762,6 @@ v1.4 (2009-10-19)
 		- added event-color-changing example in docs
 		- better defaults for right-to-left themed button icons
 
-
 v1.3.2 (2009-10-13)
 -------------------
 
@@ -820,7 +772,6 @@ v1.3.2 (2009-10-13)
 			- when switching views, the 'today' button sticks inactive, fixed
 		- gotoDate now can accept a single Date argument
 		- documentation for changes in 1.3.1 and 1.3.2 now on website
-
 
 v1.3.1 (2009-09-30)
 -------------------
@@ -833,7 +784,6 @@ v1.3.1 (2009-09-30)
 		- Subtle change in way week interval is chosen when switching from month to basicWeek/basicDay view
 		- Added 'allDayDefault' option
 		- Added 'changeView' and 'render' methods
-
 
 v1.3 (2009-09-21)
 -----------------
@@ -898,7 +848,6 @@ v1.3 (2009-09-21)
 		- Bugfixes
 			- gcal extension fetched 25 results max, now fetches all
 
-
 v1.2.1 (2009-06-29)
 -------------------
 
@@ -907,7 +856,6 @@ v1.2.1 (2009-06-29)
 			- doesn't throw an error in IE while rendering when display:none
 			- fixed 'loading' callback when used w/ multiple addEventSource calls
 			- gcal className can now be an array
-
 
 v1.2 (2009-05-31)
 -----------------
@@ -937,7 +885,6 @@ v1.2 (2009-05-31)
 		- top buttons now use `<button>` w/ an inner `<span>` for better css cusomization
 			- thus CSS has changed. IF UPGRADING FROM PREVIOUS VERSIONS,
 			UPGRADE YOUR FULLCALENDAR.CSS FILE
-
 
 v1.1 (2009-05-10)
 -----------------

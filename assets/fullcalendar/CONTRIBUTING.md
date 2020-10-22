@@ -1,13 +1,10 @@
-
 ## Reporting Bugs
 
 Each bug report MUST have a [JSFiddle/JSBin] recreation before any work can begin. [further instructions &raquo;](http://fullcalendar.io/wiki/Reporting-Bugs/)
 
-
 ## Requesting Features
 
 Please search the [Issue Tracker] to see if your feature has already been requested, and if so, subscribe to it. Otherwise, read these [further instructions &raquo;](http://fullcalendar.io/wiki/Requesting-Features/)
-
 
 ## Contributing Features
 
@@ -15,21 +12,17 @@ The FullCalendar project welcomes [Pull Requests][Using Pull Requests] for new f
 
 Furthermore, each new feature should be designed as robustly as possible and be useful beyond the immediate usecase it was initially designed for. Feel free to start a ticket discussing the feature's specs before coding.
 
-
 ## Contributing Bugfixes
 
 In the description of your [Pull Request][Using Pull Requests], please include recreation steps for the bug as well as a [JSFiddle/JSBin] demo. Communicating the buggy behavior is a requirement before a merge can happen.
-
 
 ## Contributing Languages
 
 Please edit the original files in the `lang/` directory. DO NOT edit anything in the `dist/` directory. The build system will responsible for merging FullCalendar's `lang/` data with the [MomentJS locale data].
 
-
 ## Other Ways to Contribute
 
 [Read about other ways to contribute &raquo;](http://fullcalendar.io/wiki/Contributing/)
-
 
 ## Getting Set Up
 
@@ -48,11 +41,9 @@ Enter the directory and install FullCalendar's development dependencies:
 	cd fullcalendar
 	./build/init.sh
 
-
 ## What to edit
 
 When modifying files, please do not edit the generated or minified files in the `dist/` directory. Please edit the original `src/` files.
-
 
 ## Development Workflow
 
@@ -71,7 +62,6 @@ When you are finished, run the following command to write the distributable file
 If you want to clean up the generated files, run:
 
 	grunt clean
-
 
 ## Style Guide
 
@@ -105,7 +95,6 @@ Run the command line tool to automatically check your style:
 
 	grunt check
 
-
 ## Before Submitting your Code
 
 If you have edited code (including **tests** and **translations**) and would like to submit a pull request, please make sure you have done the following:
@@ -113,7 +102,6 @@ If you have edited code (including **tests** and **translations**) and would lik
 		1. Conformed to the style guide (successfully run `grunt check`)
 
 		2. Written automated tests. View the [Automated Test Readme]
-
 
 [JSFiddle/JSBin]: http://fullcalendar.io/wiki/Reporting-Bugs/
 [Issue Tracker]: https://github.com/fullcalendar/fullcalendar/issues

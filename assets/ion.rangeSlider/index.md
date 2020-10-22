@@ -5,7 +5,6 @@
 Ion.RangeSlider. Is an easy, flexible and responsive range slider with tons of options.
 
 ***
-
         * Version: 2.1.4
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">Project page and demos</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/ion.rangeSlider-2.1.4.zip">Download ZIP</a>
@@ -41,18 +40,15 @@ Ion.RangeSlider. Is an easy, flexible and responsive range slider with tons of o
         * For advanced users slider has callbacks (onStart, onChange, onFinish, onUpdate). Slider pastes all its params to callback first argument as object
         * Slider supports date and time
 
-
 ## Demos
 
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo.html" class="switch__item">Basic demo</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_advanced.html" class="switch__item">Advanced demo</a>
         * <a href="http://ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html" class="switch__item">Interactions demo</a>
 
-
 ## GitHub
 
         * <a href="https://github.com/IonDen/ion.rangeSlider">GitHub page</a>
-
 
 ### <a href="history.md">Update history</a>
 
