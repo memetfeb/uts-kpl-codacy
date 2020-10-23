@@ -60,9 +60,9 @@ input.form-control {
 }
 
 .collapsable {
-  border: 1px solid #eee;
-  padding: 12px;
   display: block;
+  padding: 12px;
+  border: 1px solid #eee;
 }
 
 label {
