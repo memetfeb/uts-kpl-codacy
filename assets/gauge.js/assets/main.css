@@ -38,13 +38,13 @@ ul {
   width: 100%;
 }
 #footer a.github {
-   background: url(github.gif) no-repeat;
-   width: 68px;
-   height: 30px;
-   text-indent: -999em;
-   position: absolute;
-   bottom: 30px;
-   right: 30px;
+  background: url(github.gif) no-repeat;
+  width: 68px;
+  height: 30px;
+  text-indent: -999em;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 a {
   color: #333;
