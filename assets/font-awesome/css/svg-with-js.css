@@ -85,7 +85,8 @@ svg:not(:root).svg-inline--fa {
     -webkit-transform-origin: center center;
             transform-origin: center center; }
 
-.fa-layers-text, .fa-layers-counter {
+.fa-layers-text, 
+.fa-layers-counter {
   display: inline-block;
   position: absolute;
   text-align: center; }
