@@ -347,7 +347,8 @@
           border-top-right-radius: 0;
           border-bottom-right-radius: 0; }
       .daterangepicker.ltr .drp-calendar.right {
-        margin-left: 0; }
+        margin-left: 0; 
+      }
         .daterangepicker.ltr .drp-calendar.right .calendar-table {
           border-left: none;
           border-top-left-radius: 0;
